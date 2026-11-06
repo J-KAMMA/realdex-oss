@@ -1,0 +1,130 @@
+{
+  "schema": "realdex.v01-public-acceptance.v1",
+  "requirement": "P0-06 (zero allowance, exact approval, separate swap)",
+  "chainId": "84532",
+  "network": "Base Sepolia (eip155:84532)",
+  "rpcUrl": "https://sepolia.base.org",
+  "signer": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+  "signerMode": "programmatic test-only EOA (V01_SCOPE 2026-09-03 split); not the MetaMask extension",
+  "pool": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+  "tokens": {
+    "ambr": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+    "jade": "0x973aDa85eA6Eb4C9C2406e80a7E86c6b8F6cc31a"
+  },
+  "ranAt": "2026-09-04T06:41:16.258Z",
+  "directions": [
+    {
+      "direction": "AMBR->JADE",
+      "tokenIn": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+      "tokenOut": "0x973aDa85eA6Eb4C9C2406e80a7E86c6b8F6cc31a",
+      "amountIn": "100000000000000000000",
+      "quotedOut": "181418708284516875122",
+      "minAmountOut": "180511614743094290747",
+      "slippageBps": 50,
+      "deadline": 1788504964,
+      "allowanceBefore": "0",
+      "allowanceAfter": "0",
+      "approvalSent": true,
+      "exactApprovalConsumed": true,
+      "balances": {
+        "inBefore": "89550743619605264043455",
+        "inAfter": "89450743619605264043455",
+        "outBefore": "80859779460882806857818",
+        "outAfter": "81041198169167323732940",
+        "spent": "100000000000000000000",
+        "received": "181418708284516875122"
+      },
+      "reserves": {
+        "before": [
+          "19140220539117193142182",
+          "10449256380394735956545"
+        ],
+        "after": [
+          "18958801830832676267060",
+          "10549256380394735956545"
+        ]
+      },
+      "steps": [
+        {
+          "label": "AMBR->JADE approve",
+          "transactionHash": "0x65a4db11bd8abdccf7374726fc4b11a44a99bee0eadb3429d0a2f6ce2e829319",
+          "blockNumber": 46367889,
+          "status": 1,
+          "gasUsed": "46167",
+          "gasPriceWei": "6000000",
+          "l1FeeWei": "5950118960",
+          "totalFeeWei": "282952118960"
+        },
+        {
+          "label": "AMBR->JADE swap",
+          "transactionHash": "0xb6d9f1f12c080c0537c10eed6907ecbaf56b87eedb207f6765ffea96f4202f18",
+          "blockNumber": 46367890,
+          "status": 1,
+          "gasUsed": "72764",
+          "gasPriceWei": "6000000",
+          "l1FeeWei": "5950118960",
+          "totalFeeWei": "442534118960"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "direction": "JADE->AMBR",
+      "tokenIn": "0x973aDa85eA6Eb4C9C2406e80a7E86c6b8F6cc31a",
+      "tokenOut": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+      "amountIn": "100000000000000000000",
+      "quotedOut": "55345593510771070009",
+      "minAmountOut": "55068865543217214659",
+      "slippageBps": 50,
+      "deadline": 1788504971,
+      "allowanceBefore": "0",
+      "allowanceAfter": "0",
+      "approvalSent": true,
+      "exactApprovalConsumed": true,
+      "balances": {
+        "inBefore": "81041198169167323732940",
+        "inAfter": "80941198169167323732940",
+        "outBefore": "89450743619605264043455",
+        "outAfter": "89506089213116035113464",
+        "spent": "100000000000000000000",
+        "received": "55345593510771070009"
+      },
+      "reserves": {
+        "before": [
+          "18958801830832676267060",
+          "10549256380394735956545"
+        ],
+        "after": [
+          "19058801830832676267060",
+          "10493910786883964886536"
+        ]
+      },
+      "steps": [
+        {
+          "label": "JADE->AMBR approve",
+          "transactionHash": "0x56f33c4db5d75e05055529f2e4b731e9c5289763682349fafee4d69a4ee96d7e",
+          "blockNumber": 46367892,
+          "status": 1,
+          "gasUsed": "46167",
+          "gasPriceWei": "6000000",
+          "l1FeeWei": "5764920453",
+          "totalFeeWei": "282766920453"
+        },
+        {
+          "label": "JADE->AMBR swap",
+          "transactionHash": "0xbbda80b44ab29e04e8f8a8dc84b77c27f4fc0d0df41150b33a6319b400b7ddc4",
+          "blockNumber": 46367894,
+          "status": 1,
+          "gasUsed": "72698",
+          "gasPriceWei": "6000000",
+          "l1FeeWei": "5764920453",
+          "totalFeeWei": "441952920453"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "totalFeeWei": "1450206078826",
+  "remainingBalanceWei": "707229111099943",
+  "passed": true
+}

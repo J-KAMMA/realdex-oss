@@ -1,0 +1,11 @@
+{
+  "schema": "realdex.extended-probe-request.v1",
+  "networkId": "monero:mainnet",
+  "endpoints": [
+    "http://127.0.0.1:18081/json_rpc"
+  ],
+  "genesisPin": "REPLACE_WITH_INDEPENDENTLY_VERIFIED_64_HEX_GENESIS",
+  "access": {
+    "mode": "local-only"
+  }
+}

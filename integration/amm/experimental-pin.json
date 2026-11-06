@@ -1,0 +1,15 @@
+{
+  "schema": "realdex.experimental-solc-pin.v1",
+  "version": "0.8.37-nightly.2026.9.3+commit.f67cf4f2.Emscripten.clang",
+  "bytes": 9222236,
+  "sha256": "598ddf764460231e865d096010be277649d979c6d9c4d51a7a4b4036420845df",
+  "gitBlobSha1": "9a28e39364ed646e43c149543ecf975cd8b37ba4",
+  "archiveSha256": "5d77e2cfd9f8dd1600141c9e44b1563a14dd5f19d9f9de97989e51c664937d83",
+  "repository": "argotorg/solc-bin",
+  "repositoryCommit": "dd4f9bd179a15910a8c02ebeccc3d016614d97b0",
+  "repositoryPath": "bin/soljson-v0.8.37-nightly.2026.9.3+commit.f67cf4f2.js",
+  "workflowRunId": 33829520087,
+  "artifactId": 9921800111,
+  "experimentalOnly": true,
+  "satisfiesPinnedProductionCompilerGate": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "realdex.injective-local-runtime-pin.v1",
+  "version": "v1.20.3-safeharbor.2",
+  "sourceCommit": "de8a811d4c198b2723a52453cb6b61ee6c38b931",
+  "archiveUrl": "https://github.com/InjectiveFoundation/injective-core/releases/download/v1.20.3-safeharbor.2-1788352700/linux-amd64.zip",
+  "archiveBytes": 130854622,
+  "archiveSha256": "53e4a6a23fb06b60f82724efc714fe872442998eb7fbce48412360b240877d4c",
+  "files": {
+    "injectived": {
+      "bytes": 234192376,
+      "sha256": "d98141470eee7932e2d8b0a7beeff0a336c04ed84ba22b81834633607501738a"
+    },
+    "libwasmvm.x86_64.so": {
+      "bytes": 11711856,
+      "sha256": "3c05480361df7161a573a2cd715b671f9a3f5c25633e3aadcbaaa2e75da63400"
+    }
+  },
+  "assurance": "Official release binary; not independently source-rebuilt; local diagnostic only"
+}

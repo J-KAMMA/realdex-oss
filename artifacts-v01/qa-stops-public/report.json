@@ -1,0 +1,36 @@
+{
+  "servedRelease": "base-sepolia-2653db491647",
+  "scope": "built configured app on public Base Sepolia; stop conditions observed, sends counted at the signing helper",
+  "cases": [
+    {
+      "case": "amount above the token balance",
+      "message": "入力トークンの残高が足りません。数量を確認してください。",
+      "quoteShown": false,
+      "sendsRequested": 0
+    },
+    {
+      "case": "quote left to expire",
+      "executableBefore": true,
+      "executableAfter": false,
+      "expiryShown": true,
+      "sendsRequested": 0
+    },
+    {
+      "case": "gas balance below the fee budget (injected reader value)",
+      "injectedBalanceWei": "0x1",
+      "message": "手数料予算に必要なtest ETHが足りません。署名要求を停止しました。",
+      "quoteShown": false,
+      "sendsRequested": 0
+    },
+    {
+      "case": "price moved after the quote",
+      "priceMoverHash": "0x2be5b0b86195f443989c6664ba51ba6b9e10e2bd7bcc9e976d76cecc76519f3d",
+      "message": "処理を完了できませんでした。送信された可能性がある場合は再送せず、履歴とウォレットを確認してください。",
+      "walletAskedToSend": 0,
+      "appSendHash": null,
+      "appSendStatus": null
+    }
+  ],
+  "browser": "152.0.7977.65",
+  "ranAt": "2026-09-04T06:37:39.484Z"
+}

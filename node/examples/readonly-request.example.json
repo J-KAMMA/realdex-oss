@@ -1,0 +1,17 @@
+{
+  "schema": "realdex.readonly-request.v1",
+  "nodeUrl": "http://127.0.0.1:8787",
+  "relayPublicKey": "REPLACE_WITH_YOUR_NODE_PUBLIC_KEY_64_HEX",
+  "publisherKeys": ["REPLACE_WITH_ALLOWED_ORIGIN_PUBLIC_KEY_64_HEX"],
+  "rpcUrls": ["https://YOUR_FIRST_RPC_ENDPOINT", "https://YOUR_SECOND_INDEPENDENT_RPC_ENDPOINT"],
+  "request": {
+    "requestId": "local-observation-001",
+    "chainId": "eip155:84532",
+    "tokenIn": "REPLACE_WITH_INPUT_TOKEN_CONTRACT",
+    "tokenOut": "REPLACE_WITH_OUTPUT_TOKEN_CONTRACT",
+    "amountIn": "1000000",
+    "slippageBps": 50,
+    "feeTiers": [1, 5, 30]
+  },
+  "account": null
+}

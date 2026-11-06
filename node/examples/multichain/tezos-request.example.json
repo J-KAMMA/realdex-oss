@@ -1,0 +1,8 @@
+{
+  "schema": "realdex.chain-probe-request.v1",
+  "chainId": "tezos:mainnet",
+  "endpoints": [
+    "https://YOUR-FIRST-PROVIDER.invalid",
+    "https://YOUR-SECOND-PROVIDER.invalid"
+  ]
+}

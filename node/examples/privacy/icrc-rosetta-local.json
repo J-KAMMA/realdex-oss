@@ -1,0 +1,15 @@
+{
+  "schema": "realdex.extended-probe-request.v1",
+  "networkId": "icp:mainnet",
+  "endpoints": [
+    "http://127.0.0.1:8082"
+  ],
+  "ledger": {
+    "canister": "mxzaz-hqaaa-aaaar-qaada-cai",
+    "networkFormat": "principal"
+  },
+  "genesisPin": "REPLACE_WITH_INDEPENDENTLY_VERIFIED_LEDGER_BLOCK0_HASH",
+  "access": {
+    "mode": "local-only"
+  }
+}

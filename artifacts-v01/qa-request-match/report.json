@@ -1,0 +1,124 @@
+{
+  "servedRelease": "base-sepolia-2653db491647",
+  "scope": "built configured app on public Base Sepolia; every wallet request decoded and compared with the review panel",
+  "comparisons": [
+    {
+      "field": "input amount",
+      "shown": "300000000000000000",
+      "requested": "300000000000000000",
+      "match": true
+    },
+    {
+      "field": "minimum received",
+      "shown": "591086079790442603",
+      "requested": "591086079790442603",
+      "match": true
+    },
+    {
+      "field": "recipient",
+      "shown": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+      "requested": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+      "match": true
+    },
+    {
+      "field": "execution target",
+      "shown": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+      "requested": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+      "match": true
+    },
+    {
+      "field": "approval spender",
+      "shown": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+      "requested": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+      "match": true
+    },
+    {
+      "field": "approval amount",
+      "shown": "今回の0.3のみ",
+      "requested": "300000000000000000",
+      "match": true
+    },
+    {
+      "field": "token in",
+      "shown": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+      "requested": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+      "match": true
+    },
+    {
+      "field": "deadline",
+      "shown": "15:27:55",
+      "requested": "15:27:55",
+      "match": true
+    }
+  ],
+  "browser": "152.0.7977.65",
+  "shown": {
+    "pairs": {
+      "支払": "0.3 AMBR",
+      "予想受取": "0.594056361598434777 JADE",
+      "最低受取": "0.591086079790442603 JADE",
+      "承認": "今回の0.3 AMBRのみ",
+      "交換手数料": "1 bp（0.01%）· プールが受け取り、流動性提供者の持分になります。運営の取り分はありません",
+      "承認先・交換先": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+      "受取先": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+      "期限": "15:27:55"
+    },
+    "steps": [
+      {
+        "summary": "承認の費用予算: 0.00000062868747726 test ETH",
+        "L2実行予算": "0.000000614295 test ETH",
+        "L1データ予算": "0.00000001439247726 test ETH",
+        "Operator予算": "0.0 test ETH",
+        "Gas limit": "55845",
+        "Max fee / gas": "0.011 gwei",
+        "Priority fee / gas": "0.001 gwei",
+        "Nonce": "118"
+      },
+      {
+        "summary": "交換の費用予算: 0.000001113762723552 test ETH",
+        "L2実行予算": "0.000001089649 test ETH",
+        "L1データ予算": "0.000000024113723552 test ETH",
+        "Operator予算": "0.0 test ETH",
+        "Gas limit": "99059",
+        "Max fee / gas": "0.011 gwei",
+        "Priority fee / gas": "0.001 gwei",
+        "Nonce": "119"
+      }
+    ]
+  },
+  "requests": [
+    {
+      "name": "approve",
+      "to": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+      "from": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+      "args": {
+        "spender": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+        "value": "300000000000000000"
+      },
+      "gas": "0xda25",
+      "maxFeePerGas": "0xa7d8c0",
+      "maxPriorityFeePerGas": "0xf4240",
+      "nonce": "0x76",
+      "value": "0x0",
+      "broadcastHash": "0xef4d898e017db4626a81d1b37dbf252d5bd511b220069423511bd62905c61721"
+    },
+    {
+      "name": "swapExactIn",
+      "to": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+      "from": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+      "args": {
+        "tokenIn": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+        "amountIn": "300000000000000000",
+        "minAmountOut": "591086079790442603",
+        "recipient": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+        "deadline": "1788503275"
+      },
+      "gas": "0x182f3",
+      "maxFeePerGas": "0xa7d8c0",
+      "maxPriorityFeePerGas": "0xf4240",
+      "nonce": "0x77",
+      "value": "0x0"
+    }
+  ],
+  "ranAt": "2026-09-04T06:27:21.362Z"
+}

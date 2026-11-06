@@ -1,0 +1,12 @@
+{
+  "network": "icp:mainnet",
+  "ledgerIn": "ryjl3-tyaaa-aaaaa-aaaba-cai",
+  "ledgerOut": "mxzaz-hqaaa-aaaar-qaada-cai",
+  "reserveInAtomic": "10000000000",
+  "reserveOutAtomic": "100000000",
+  "inputBudgetAtomic": "100000000",
+  "inputTransferFeeAtomic": "10000",
+  "outputTransferFeeAtomic": "10",
+  "poolFeeBps": 30,
+  "slippageBps": 50
+}

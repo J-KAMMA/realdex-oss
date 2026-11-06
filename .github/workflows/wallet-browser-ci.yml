@@ -1,0 +1,39 @@
+name: Wallet HTTP browser regression (no transactions)
+on:
+  pull_request:
+    paths:
+      - 'wallet/**'
+      - '.github/workflows/wallet-browser-ci.yml'
+permissions:
+  contents: read
+concurrency:
+  group: wallet-browser-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  wallet-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '24.14.0'
+          package-manager-cache: false
+      - name: Provision pinned disposable browser environment
+        run: |
+          python3 -m venv "$RUNNER_TEMP/realdex-browser-venv"
+          "$RUNNER_TEMP/realdex-browser-venv/bin/pip" install -r integration/browser-requirements.txt
+          "$RUNNER_TEMP/realdex-browser-venv/bin/python" -m playwright install --with-deps chromium
+      - name: Actual loopback HTTP and CSP wallet regression
+        run: '"$RUNNER_TEMP/realdex-browser-venv/bin/python" wallet/test/browser-http.py --output browser-http-ci'
+      - name: Retain safe result, never wallet files or capabilities
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: browser-http-${{ github.sha }}-${{ github.run_attempt }}
+          path: browser-http-ci/browser-http.json
+          if-no-files-found: error
+          retention-days: 14
+# Disposable unfunded accounts only. No private secrets or external RPC configured.

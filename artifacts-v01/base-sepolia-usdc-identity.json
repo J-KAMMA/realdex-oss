@@ -1,0 +1,27 @@
+{
+  "schema": "realdex.base-sepolia-usdc-identity.v1",
+  "network": "eip155:84532",
+  "address": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "previouslyRecorded": "0x036CbD53842c5426634e7929541eC2318f3dCF7c",
+  "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+  "readers": [
+    {
+      "url": "https://sepolia.base.org/",
+      "chainId": "84532",
+      "runtimeCodeLength": 3598,
+      "symbol": "USDC",
+      "decimals": 6,
+      "name": "USDC"
+    },
+    {
+      "url": "https://base-sepolia-rpc.publicnode.com/",
+      "chainId": "84532",
+      "runtimeCodeLength": 3598,
+      "symbol": "USDC",
+      "decimals": 6,
+      "name": "USDC"
+    }
+  ],
+  "previousAddressRuntimeCodeLength": 0,
+  "observedAt": "2026-09-05"
+}

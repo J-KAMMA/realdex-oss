@@ -1,0 +1,18 @@
+{
+  "schema": "localswap.asset-manifest.v1",
+  "name": "Inspection-only example",
+  "revision": 1,
+  "assets": [
+    {
+      "assetType": "eip155:1/erc20:0x6b175474e89094c44da98b954eedeac495271d0f",
+      "symbol": "DAI",
+      "name": "Dai Stablecoin",
+      "decimals": 18,
+      "provenance": "user-imported",
+      "execution": "design-gate"
+    }
+  ],
+  "evidenceUrls": [
+    "https://example.invalid/replace-with-primary-evidence"
+  ]
+}

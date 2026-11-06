@@ -1,0 +1,13 @@
+import test from 'node:test'; import assert from 'node:assert/strict';
+import {transferReceiptObservation} from '../lib/transfer-receipts.mjs';
+import {abiAddress,abiWord} from '../lib/transactions.mjs';
+import {keccak256} from '../../node/verified/keccak.mjs';
+const FROM='0x'+'11'.repeat(20),TO='0x'+'22'.repeat(20),TOKEN='0x'+'33'.repeat(20),OTHER='0x'+'44'.repeat(20);
+const record={summary:{operation:'erc20-transfer',from:FROM,recipient:TO,to:TOKEN,amountAtomic:'100'}};
+const topic=keccak256(new TextEncoder().encode('Transfer(address,address,uint256)'));
+const log=(amount=100,patch={})=>({address:TOKEN,topics:[topic,'0x'+abiAddress(FROM),'0x'+abiAddress(TO)],data:'0x'+abiWord(amount),...patch});
+test('A successful receipt alone is not proof the requested tokens were received',()=>{const o=transferReceiptObservation(record,{status:'0x1'});assert.equal(o.transactionReportedSuccessful,true);assert.equal(o.matchingTransferEventObserved,false);assert.equal(o.actualBalanceChangeVerified,false);});
+test('Matching Transfer event is observed, never promoted to finality or audited balance change',()=>{const o=transferReceiptObservation(record,{status:'0x1',logs:[log()]});assert.equal(o.matchingTransferEventObserved,true);assert.equal(o.observedEventAmountAtomic,'100');assert.equal(o.finalityVerified,false);assert.equal(o.actualBalanceChangeVerified,false);});
+test('Wrong token, recipient, malformed data and removed logs cannot count as receipt evidence',()=>{for(const bad of [log(100,{address:OTHER}),log(100,{topics:[topic,'0x'+abiAddress(FROM),'0x'+abiAddress(OTHER)]}),log(100,{data:'0x1'}),log(100,{removed:true}),log(100,{topics:[123,null,{}]})])assert.equal(transferReceiptObservation(record,{status:'0x1',logs:[bad]}).matchingTransferEventObserved,false);});
+test('Split event amounts sum exactly, while fee-on-transfer shortfall is not hidden',()=>{assert.equal(transferReceiptObservation(record,{status:'0x1',logs:[log(40),log(60)]}).matchingTransferEventObserved,true);const taxed=transferReceiptObservation(record,{status:'0x1',logs:[log(99)]});assert.equal(taxed.matchingTransferEventObserved,false);assert.equal(taxed.observedEventAmountAtomic,'99');});
+test('Reverted transaction does not report a delivered token amount',()=>{const o=transferReceiptObservation(record,{status:'0x0',logs:[log()]});assert.equal(o.transactionReportedSuccessful,false);assert.equal(o.matchingTransferEventObserved,false);});

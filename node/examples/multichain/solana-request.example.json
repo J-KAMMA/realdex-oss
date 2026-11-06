@@ -1,0 +1,9 @@
+{
+  "schema": "realdex.chain-probe-request.v1",
+  "chainId": "solana:mainnet-beta",
+  "endpoints": [
+    "https://YOUR-FIRST-PROVIDER.invalid/rpc",
+    "https://YOUR-SECOND-PROVIDER.invalid/rpc"
+  ],
+  "genesisPin": "REPLACE_WITH_INDEPENDENTLY_REVIEWED_GENESIS_IDENTIFIER"
+}

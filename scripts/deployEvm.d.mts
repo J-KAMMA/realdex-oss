@@ -1,0 +1,2 @@
+export function loadNetworks(): Record<string, { name: string; chainId: string; environment: string; nativeSymbol: string; rpcUrls: string[]; explorerAddressUrl: string }>;
+export function deployerKey(env?: Record<string, string | undefined>): string;

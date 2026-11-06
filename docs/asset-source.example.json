@@ -1,0 +1,12 @@
+{
+  "schema": "localswap.asset-source.v1",
+  "id": "example.assets",
+  "name": "Replace with your reviewed source",
+  "signerAddress": "0x1111111111111111111111111111111111111111",
+  "allowedChainIds": [
+    "eip155:1"
+  ],
+  "evidenceUrls": [
+    "https://example.invalid/replace-with-source-policy"
+  ]
+}

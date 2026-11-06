@@ -1,0 +1,92 @@
+name: Injective local runtime (no public orders)
+on:
+  push:
+    branches: ['work/injective-local-acceptance-*', 'work/injective-submission-expiry-*']
+  pull_request:
+    paths: ['wallet/injective/**', 'wallet/lib/vault.mjs', 'wallet/non-evm/controller.mjs', 'integration/injective/**', 'node/external/injective-*.mjs', 'node/external/test/injective-*.mjs', '.github/workflows/injective-local-ci.yml']
+permissions:
+  contents: read
+concurrency:
+  group: injective-local-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Exact committed source handoff
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/injective-source"
+          mkdir -p "$out"
+          git rev-parse HEAD > "$out/commit.txt"
+          git rev-parse HEAD^{tree} > "$out/tree.txt"
+          git bundle create "$out/source.bundle" HEAD
+          git bundle verify "$out/source.bundle"
+          git archive --format=tar HEAD > "$out/source.tar"
+          cd "$out"
+          sha256sum source.bundle source.tar > SHA256SUMS
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: injective-source-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/injective-source/
+          if-no-files-found: error
+          retention-days: 14
+  exchange-lifecycle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['22.16.0', '24.14.0']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: Provision exact diagnostic node before any execution
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/injective-evidence"
+          git rev-parse HEAD > "$RUNNER_TEMP/injective-evidence/commit.txt"
+          git rev-parse HEAD^{tree} > "$RUNNER_TEMP/injective-evidence/tree.txt"
+          curl --fail --location --proto '=https' --proto-redir '=https' --tlsv1.2 --max-time 300 'https://github.com/InjectiveFoundation/injective-core/releases/download/v1.20.3-safeharbor.2-1788352700/linux-amd64.zip' -o "$RUNNER_TEMP/injective.zip"
+          python3 -I integration/injective/provision.py --archive "$RUNNER_TEMP/injective.zip" --output "$RUNNER_TEMP/injective-tools" > "$RUNNER_TEMP/injective-evidence/provision.json"
+      - name: Actual spot lifecycle and all owner funding, continuity and expiry paths
+        shell: bash
+        env:
+          REALDEX_INJECTIVE_DIRECTORY: ${{ runner.temp }}/injective-tools
+          REALDEX_INJECTIVE_EVIDENCE: ${{ runner.temp }}/injective-evidence/lifecycle.json
+          REALDEX_INJ10_EVIDENCE: ${{ runner.temp }}/injective-evidence/submission-expiry.json
+        run: |
+          set -euo pipefail
+          node --test --test-reporter=tap --test-concurrency=1 \
+            integration/injective/Lifecycle.test.mjs \
+            integration/injective/OwnerWallet.test.mjs \
+            integration/injective/OwnerActions.test.mjs \
+            integration/injective/OwnerRecovery.test.mjs \
+            integration/injective/OwnerDeposit.test.mjs \
+            integration/injective/OwnerContinuity.test.mjs \
+            integration/injective/OwnerSubmissionExpiry.test.mjs 2>&1 | tee "$RUNNER_TEMP/injective-evidence/lifecycle.tap"
+          git diff --exit-code HEAD --
+      - name: Preserve only source-bound diagnostics, never keys or chain directories
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: injective-local-node-${{ matrix.node }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/injective-evidence/
+          if-no-files-found: error
+          retention-days: 14
+# No public RPC, keys, chain directories, deployment or release approval.
+# Real ephemeral keys are created only inside the disposable local-node fixture.

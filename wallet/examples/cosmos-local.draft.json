@@ -1,0 +1,32 @@
+{
+  "family": "cosmos",
+  "id": "cosmos:realdex-local-dev",
+  "name": "My local Cosmos",
+  "chainId": "realdex-local-dev",
+  "hrp": "cosmos",
+  "endpoints": [
+    {
+      "rpcUrl": "http://127.0.0.1:26657/",
+      "restUrl": "http://127.0.0.1:1317/"
+    },
+    {
+      "rpcUrl": "http://127.0.0.1:26658/",
+      "restUrl": "http://127.0.0.1:1318/"
+    }
+  ],
+  "checkpoint": {
+    "height": 1,
+    "hash": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "denom": "stake",
+  "decimals": 6,
+  "symbol": "TEST",
+  "feeDenom": "stake",
+  "feeDecimals": 6,
+  "maxTransferAtomic": "1000000000",
+  "maxFeeAtomic": "100000",
+  "maxGasLimit": "1000000",
+  "timeoutBlocks": 20,
+  "minConfirmations": 1,
+  "broadcastEnabled": false
+}

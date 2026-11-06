@@ -1,0 +1,60 @@
+{
+  "schema": "realdex.clean-room-reproduction.v1",
+  "ref": "HEAD",
+  "startedAt": "2026-09-04T20:29:40.690Z",
+  "steps": [
+    {
+      "name": "clone",
+      "ok": true,
+      "seconds": 4
+    },
+    {
+      "name": "line endings",
+      "ok": true,
+      "seconds": 0
+    },
+    {
+      "name": "install",
+      "ok": true,
+      "seconds": 100
+    },
+    {
+      "name": "release identity",
+      "ok": true,
+      "seconds": 0
+    },
+    {
+      "name": "tests",
+      "ok": true,
+      "seconds": 80
+    },
+    {
+      "name": "typecheck",
+      "ok": true,
+      "seconds": 12
+    },
+    {
+      "name": "build",
+      "ok": true,
+      "seconds": 18
+    },
+    {
+      "name": "distribution",
+      "ok": true,
+      "seconds": 0
+    }
+  ],
+  "mismatches": [],
+  "commit": "a052104a1fc588748c0d1381efeb2d7a8847c394",
+  "crlfFiles": 0,
+  "releaseId": "base-sepolia-5885d029020b",
+  "bundleSha256": "sha256:5885d029020bd07bfc0de545dd94988d0b0b1e418639ce54ae20fa857de9eea8",
+  "distribution": {
+    "assets/index-C0AMc-OE.css": "sha256:9d8ee65a5757065d49188b3540fcaed138d98cdf40735525e0c78a71f3086b10",
+    "assets/index-CbZXXdYN.js": "sha256:cebff9d52c8645ca0de375f25ec1197a1d9090d9549dd715e97f6b723c781bb0",
+    "index.html": "sha256:4ce0402135523c18f1d764c737aca9f80895a9b7064305c20ca5129e7ff6ff96",
+    "release-id.txt": "sha256:248b6c649b5acc9c20789c8922e82131ecb2be2cc18a57e7ce3feffba3becd33"
+  },
+  "finishedAt": "2026-09-04T20:33:15.522Z",
+  "reproduced": true
+}

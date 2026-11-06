@@ -1,0 +1,32 @@
+{
+  "release": "0.15.0-dev.20260905",
+  "productionReady": false,
+  "bitcoin": {
+    "network": "regtest-only",
+    "ownerOnly": true,
+    "keyCreationAndOfflineSigning": true,
+    "utxoDiscovery": true,
+    "fundingTransactionVerification": true,
+    "initialBroadcast": true,
+    "receiptReconciliation": true,
+    "headerAndMerkleBinding": true,
+    "independentConsensusOrFinalityVerification": false,
+    "automaticResend": false,
+    "manualResend": false,
+    "rbf": false,
+    "psbt": false,
+    "swapOrBridge": false,
+    "aiSigning": false,
+    "testedNode": "single hash-pinned Bitcoin Core CI build; no P2P"
+  },
+  "unchangedFamilies": {
+    "EVM": "existing restricted development runtime paths",
+    "Solana": "existing SOL + classic SPL, local-only",
+    "ICP": "offline signing, not certified settlement",
+    "Cosmos": "offline MsgSend only",
+    "Stellar": "offline standalone payment only",
+    "Aptos": "offline local chain transfer only"
+  },
+  "restoration": "latest backup preserves signatures and reservations; older backup/cross-device rollback protection unresolved",
+  "coverage": "not a claim of top-100 network completeness"
+}

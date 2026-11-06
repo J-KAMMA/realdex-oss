@@ -1,0 +1,8 @@
+{
+  "platform":"linux", "arch":"x64", "bytes":311596440,
+  "sha256":"8e3afd78738ebc6d59787fc232c4f0025b6a3dd1e2c59cee4fd1b5ed1ba3dba4",
+  "archiveSha256":"7120a949b516e692d0dd197a3820308b704c89d97163f0f2b99e133aadef61cc",
+  "version":"v31.99.0-031175197f1b",
+  "source":"bitcoin-core/HWI GitHub CI artifact 9584237798; run 32899502994",
+  "scope":"Test-only development build, not a production Bitcoin Core distribution"
+}

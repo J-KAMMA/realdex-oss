@@ -1,0 +1,21 @@
+{
+  "name": "realdex-node-preview",
+  "version": "0.6.0-dev.20260905",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "test": "node test/run-tests.mjs",
+    "demo": "node demo.mjs",
+    "init": "node cli.mjs init",
+    "start": "node cli.mjs start",
+    "verify": "node verify.mjs",
+    "test:verified": "node test/run-tests.mjs --verified-only",
+    "test:with-release": "node test/run-tests.mjs --with-release",
+    "chains": "node chains.mjs",
+    "privacy": "node privacy.mjs"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "realdex.completion.v0.22",
+  "feature": "IBC Classic ICS-20 bridge",
+  "productionReady": false,
+  "implemented": [
+    "strict local route registry",
+    "owner-only exact MsgTransfer signing",
+    "encrypted raw transaction and sequence journal",
+    "native-to-voucher and same-lane return",
+    "source, receive and ACK identity binding",
+    "timeout/error-ack refund tracking",
+    "read-only relay plan",
+    "two-chain disposable real-IBC harness"
+  ],
+  "notImplementedOrNotVerified": [
+    "public network lanes",
+    "autonomous production relayer",
+    "desktop independent consensus/state verification",
+    "multi-message relay receipt parsing",
+    "cross-VM universal bridging",
+    "arbitrary token representations or middleware",
+    "root React build and real-browser HTTP integration",
+    "Windows native validation",
+    "independent audit and OS key protection"
+  ],
+  "baselineConstraintsPreserved": [
+    "existing CCTP pauses",
+    "no new AI or shared-node signature permissions",
+    "no mainnet unlock",
+    "v0.21 WIP not merged"
+  ]
+}

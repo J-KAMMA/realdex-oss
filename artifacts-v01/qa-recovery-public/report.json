@@ -1,0 +1,31 @@
+{
+  "servedRelease": "base-sepolia-2653db491647",
+  "scope": "built configured app on public Base Sepolia; the app performs the send through a localhost signing helper, then the page is reloaded",
+  "cases": [
+    {
+      "executeLabel": "数量を承認して交換へ（ウォレットで2回確認）",
+      "publicSends": [
+        {
+          "hash": "0x72b4da24492825e77f37c81bab8e7cbdfe17a946eaf318531715ed5e375301fd",
+          "to": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996"
+        }
+      ],
+      "historyBeforeReload": [
+        "2026/9/4 15:54:43 · AMBR→JADE · トークン承認を確認・交換の送信状況は未確認"
+      ],
+      "historyAfterReload": [
+        "2026/9/4 15:54:43 · AMBR→JADE · トークン承認を確認・交換の送信状況は未確認"
+      ],
+      "stageAdvancedOnReload": false,
+      "restoredRecordExcerpt": "トークン承認を確認・交換の送信状況は未確認交換経路に紐づく保存記録 · 改訂 2取引状況を照会トークンの使用許可を確認しました。交換ハッシュは未保存ですが、交換を送信していない証拠ではありません。再送しないでください。入力数量0.5 AMBReip155:84532/erc20:0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996最低受取数量0.903414776984728985 JADEeip155:84532/erc20:0x973aDa85eA6Eb4C9C2406e80a7E86c6b8F6cc31aチェーン・アカウントeip155:84532eip155:84532:0x3EF758d338E783a69CD297f6907c1adf98970f2c実行方法・コントラクトswapExactIn0xf1c3cCbdC5C4550778374cF0a",
+      "walletMethods": [
+        "eth_chainId",
+        "eth_requestAccounts",
+        "eth_accounts"
+      ],
+      "pageErrors": 0
+    }
+  ],
+  "browser": "152.0.7977.65",
+  "ranAt": "2026-09-04T06:54:49.058Z"
+}

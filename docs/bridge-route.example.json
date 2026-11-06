@@ -1,0 +1,33 @@
+{
+  "id": "example-disabled-route",
+  "revision": 1,
+  "category": "evm-to-non-evm",
+  "status": "disabled",
+  "provider": "replace-with-reviewed-provider",
+  "mechanism": "burn-mint",
+  "verificationModel": "guardian-attestation",
+  "source": {
+    "id": "eip155:replace",
+    "name": "Replace source chain",
+    "family": "evm",
+    "nativeAsset": "REPLACE",
+    "addressFormat": "0x",
+    "finalityLabel": "replace-with-policy"
+  },
+  "destination": {
+    "id": "replace:destination",
+    "name": "Replace destination chain",
+    "family": "solana",
+    "nativeAsset": "REPLACE",
+    "addressFormat": "base58",
+    "finalityLabel": "replace-with-policy"
+  },
+  "sourceEndpoint": "",
+  "destinationEndpoint": "",
+  "supportedAssets": [],
+  "requiredSourceFinality": "replace",
+  "requiredDestinationFinality": "replace",
+  "recovery": "none",
+  "reviewedAt": "1970-01-01T00:00:00.000Z",
+  "evidenceUrls": []
+}

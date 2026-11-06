@@ -1,0 +1,8 @@
+{
+  "schema": "realdex.chain-probe-request.v1",
+  "chainId": "sui:35834a8a",
+  "endpoints": [
+    "https://YOUR-FIRST-PROVIDER.invalid/graphql",
+    "https://YOUR-SECOND-PROVIDER.invalid/graphql"
+  ]
+}

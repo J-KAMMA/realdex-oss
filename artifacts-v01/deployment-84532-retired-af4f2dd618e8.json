@@ -1,0 +1,209 @@
+{
+  "schema": "realdex.v01-deployment-record.v1",
+  "chainId": "84532",
+  "rpcUrl": "https://sepolia.base.org",
+  "deployer": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+  "recordedAt": "2026-09-03T15:28:17.610Z",
+  "addresses": {
+    "ambr": "0x83B2566440f69aE674354Dbbee50040ae1958558",
+    "jade": "0x031cD90D079bf4B7E65De5be1EeA54d950Bf9446",
+    "factory": "0x49694599e5B1aA4AD172F702ee2317B11B21606b",
+    "router": "0xcCe43114e5C3A8bd55c07785cd50EEBd7e88662b",
+    "pool": "0xdBf5c731a2B4c6Cf1B6E51b1dF1ffdf327EAEfa8"
+  },
+  "runtimeCodeHashes": {
+    "ambr": "0x2a56844165786cdd129904682e03426a2993721f957e2421ae7d712ce7f8c14f",
+    "jade": "0x2a56844165786cdd129904682e03426a2993721f957e2421ae7d712ce7f8c14f",
+    "factory": "0xefb45c9b594f09c0c0ab54057825dcb2b8b65a1fac24a26e5403239ef61b12f3",
+    "router": "0x08da00c257c88a2eb455fa40ae442d051b40c267e9db9ae89caaf3029efea060",
+    "pool": "0xdb02aa8bee9914199e3c7ca13b22bb7e2feb917c5cbe34c31790a6ec79413da6"
+  },
+  "contracts": {
+    "factory": {
+      "address": "0x49694599e5B1aA4AD172F702ee2317B11B21606b",
+      "deploymentTxHash": "0x062b2fb38c3a2c2ee1b1a1364e8a140a2f5ecd9abe45f5cedc9d738ad9332538",
+      "blockNumber": 46340409,
+      "runtimeCodeHash": "0xefb45c9b594f09c0c0ab54057825dcb2b8b65a1fac24a26e5403239ef61b12f3"
+    },
+    "router": {
+      "address": "0xcCe43114e5C3A8bd55c07785cd50EEBd7e88662b",
+      "deploymentTxHash": "0x7f62da8b830ab5a66e95c851c7709962bfcebc11f922f80fa87755a800ac293f",
+      "blockNumber": 46340410,
+      "runtimeCodeHash": "0x08da00c257c88a2eb455fa40ae442d051b40c267e9db9ae89caaf3029efea060"
+    }
+  },
+  "pool": {
+    "address": "0xdBf5c731a2B4c6Cf1B6E51b1dF1ffdf327EAEfa8",
+    "token0": "0x031cD90D079bf4B7E65De5be1EeA54d950Bf9446",
+    "reserve0": "20000000000000000000000",
+    "reserve1": "10000000000000000000000"
+  },
+  "steps": [
+    {
+      "label": "token:AMBR",
+      "transactionHash": "0x6bcb14513d98ae2c1dc3ee1d93a8b154edff98d45a97f1ad4d4d761093d23969",
+      "blockNumber": 46340407,
+      "contractAddress": "0x83B2566440f69aE674354Dbbee50040ae1958558",
+      "gasUsed": "485924",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "91309104391",
+      "totalFeeWei": "3006853104391",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "token:JADE",
+      "transactionHash": "0x322e6c209ac09d4f97a46c6020956683c2ceb83960e4847af8411f702c9f2d05",
+      "blockNumber": 46340408,
+      "contractAddress": "0x031cD90D079bf4B7E65De5be1EeA54d950Bf9446",
+      "gasUsed": "485912",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "91263383331",
+      "totalFeeWei": "3006735383331",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "factory",
+      "transactionHash": "0x062b2fb38c3a2c2ee1b1a1364e8a140a2f5ecd9abe45f5cedc9d738ad9332538",
+      "blockNumber": 46340409,
+      "contractAddress": "0x49694599e5B1aA4AD172F702ee2317B11B21606b",
+      "gasUsed": "1896241",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "222894313719",
+      "totalFeeWei": "11600340313719",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "router",
+      "transactionHash": "0x7f62da8b830ab5a66e95c851c7709962bfcebc11f922f80fa87755a800ac293f",
+      "blockNumber": 46340410,
+      "contractAddress": "0xcCe43114e5C3A8bd55c07785cd50EEBd7e88662b",
+      "gasUsed": "976424",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "117187224085",
+      "totalFeeWei": "5975731224085",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "createPool",
+      "transactionHash": "0x462d5377c9b5db3aef668e291323af6125cc05c15f3744381f311eedca9dc4de",
+      "blockNumber": 46340411,
+      "contractAddress": null,
+      "gasUsed": "1595385",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "5465757266",
+      "totalFeeWei": "9577775757266",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "mint:AMBR",
+      "transactionHash": "0x851d067df5b5bee2477f1d88c1fd3b800bcc10dd60dc0f3a69bf1e8b3bd7905f",
+      "blockNumber": 46340412,
+      "contractAddress": null,
+      "gasUsed": "68310",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "5465757266",
+      "totalFeeWei": "415325757266",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "mint:JADE",
+      "transactionHash": "0x2dbc32b78210d350371fbcca992e431a9962ccdb226a68dc87a5452709831a8c",
+      "blockNumber": 46340413,
+      "contractAddress": null,
+      "gasUsed": "68310",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "5465757266",
+      "totalFeeWei": "415325757266",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "nonce:53",
+      "transactionHash": "0x8cecea1162b490b9c49e2d0ee176eb9cc745980e4a7bb7cafed4b5f93a873977",
+      "blockNumber": 46340459,
+      "contractAddress": null,
+      "gasUsed": "46179",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "5720558904",
+      "totalFeeWei": "282794558904",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "nonce:54",
+      "transactionHash": "0x59d59f2e1d08b8798f12dc04d15110c0cb4bf5a5a23c31a886628bdf445a5ada",
+      "blockNumber": 46340460,
+      "contractAddress": null,
+      "gasUsed": "46179",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "5720558904",
+      "totalFeeWei": "282794558904",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "nonce:55",
+      "transactionHash": "0xc6692d1bfbc2e2f7162d1cfd286a8973cbf04bfd477b07d2f791178579c68409",
+      "blockNumber": 46340462,
+      "contractAddress": null,
+      "gasUsed": "226071",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "6273016160",
+      "totalFeeWei": "1362699016160",
+      "status": 1,
+      "recovered": true
+    },
+    {
+      "label": "mint:AMBR",
+      "transactionHash": "0x11c8b214cd537f84357eae5b4bc1e16ba4c1075e9abf4f09038612527afbbd7a",
+      "blockNumber": 46340501,
+      "contractAddress": null,
+      "gasUsed": "34110",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "6163720355",
+      "totalFeeWei": "210823720355",
+      "recovered": false
+    },
+    {
+      "label": "mint:JADE",
+      "transactionHash": "0x04241739a9f375386efe762a37066a834bde568aca2331b8847417cf505535e3",
+      "blockNumber": 46340502,
+      "contractAddress": null,
+      "gasUsed": "34110",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "6163720355",
+      "totalFeeWei": "210823720355",
+      "recovered": false
+    },
+    {
+      "label": "approve:AMBR",
+      "transactionHash": "0x0d3082899e5caea8f63c6747e9e6d1138c0f05485fe249465e0c0c9a059a56fd",
+      "blockNumber": 46340503,
+      "contractAddress": null,
+      "gasUsed": "29079",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "6163720355",
+      "totalFeeWei": "180637720355",
+      "recovered": false
+    },
+    {
+      "label": "approve:JADE",
+      "transactionHash": "0x7063cf64de541c6be213f1498d63a347af8571c4f3e961098d5f890fd60ca727",
+      "blockNumber": 46340504,
+      "contractAddress": null,
+      "gasUsed": "29079",
+      "gasPriceWei": "6000000",
+      "l1FeeWei": "6163720355",
+      "totalFeeWei": "180637720355",
+      "recovered": false
+    }
+  ],
+  "totalFeeWei": "36709298312712",
+  "remainingBalanceWei": "804095711053595"
+}

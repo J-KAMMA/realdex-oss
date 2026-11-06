@@ -1,0 +1,6 @@
+{
+  "slug": "my-lab",
+  "chainId": "1337",
+  "genesisHash": "REPLACE_WITH_INDEPENDENTLY_VERIFIED_64_HEX_GENESIS",
+  "name": "My private EVM network"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "realdex.smart-account-stable-migration-plan.v1",
+  "strategy": "dual-factory-versioned",
+  "currentArtifactSha256": "0c49254b131bc0925952ee58df4388441608046c80665c0c73e642314c793980",
+  "candidateSha256": "0d69764adb7984d2d1dc9138ff79dcbd3d1a70e78075a7fc23d377bdecc54c96",
+  "newFactoryRequired": true,
+  "legacyAccountsRemainBound": true,
+  "legacyDescriptorRewriteAllowed": false,
+  "automaticMigrationAllowed": false,
+  "sameChainExistingFactoryReuseAllowed": false,
+  "productionApproved": false,
+  "independentReviewComplete": false,
+  "descriptorBinding": {
+    "registrySchema": "realdex.smart-account-artifact-registry.v1",
+    "legacyArtifactId": "sha256:0c49254b131bc0925952ee58df4388441608046c80665c0c73e642314c793980",
+    "legacyDescriptorsWithoutArtifactIdResolveToLegacy": true,
+    "nonLegacyArtifactIdRequired": true,
+    "unknownArtifactIdsRejected": true,
+    "legacyDescriptorCanonicalShapePreserved": true,
+    "implementationSha256": {
+      "wallet/smart-account/artifacts.mjs": "cdacc6a4793f591cd1887915d7ef13340e8ccb9d8418090c648da7249f642d8d",
+      "wallet/smart-account/legacy-build-v1.json": "0c49254b131bc0925952ee58df4388441608046c80665c0c73e642314c793980",
+      "wallet/smart-account/codec.mjs": "a16b56776c44af049584410a1513c174462a764d4a24071a54281c4d1c828152",
+      "wallet/smart-account/engine.mjs": "555ccf1e4897e15cb07c59819a93fc481cea6895fad5fb33025c36e2fa4a4ec8",
+      "wallet/smart-account/controller.mjs": "e9d4283bdd62088f24d2b93529d27267ffa22509ea6dfdd4fd2c964ef8afa967",
+      "wallet/smart-account/api.d.mts": "296196601a163a01e983161ec7ceec010c52b47dfb76ea18dbc1c5a1d63d4e73"
+    }
+  },
+  "legacyIdentity": {
+    "accountCreationSha256": "78680e84aabd5d273d2a9f5891da4e3b84225cb118f237f2a427285702173e14",
+    "accountRuntimeSha256": "1be8be360256b04559adb5b46117c1517aeb5e86af74e3f47d7d718c4686e491",
+    "factoryCreationSha256": "203f90043402b0690729f249438d11ecbb1a73c0e9d245a0f90affb0b069a6d9",
+    "factoryRuntimeSha256": "61e610238014f5800e7950025bb3c53024d2925c70bd85eb4aa41cdcf0aad7d7"
+  },
+  "stableIdentity": {
+    "accountCreationSha256": "eb6e853a1c12d40e153fe6edba8b85fc39a8e85516953cc0d22749e4c96c9eba",
+    "accountRuntimeSha256": "188ed270f3a1c06f5d4af713b8c97ef9dc103bf83f5c5aa723c1ba67fcef66a5",
+    "factoryCreationSha256": "bbf84fb62e5ea4300c1bebe1f672f9b36d5420914a875cd9860a04b8785822a0",
+    "factoryRuntimeSha256": "c2e7de6387fa35a1d0adddb939109e4f0e3101cb48bc18bec127fd416dbb6aac"
+  },
+  "sameFactoryProbe": {
+    "factory": "0x2222222222222222222222222222222222222222",
+    "owner": "0x1111111111111111111111111111111111111111",
+    "salt": "0x3333333333333333333333333333333333333333333333333333333333333333",
+    "legacyAccount": "0xbb9939dc052c618b26b6d62cba745328646085e7",
+    "stableAccount": "0x577e95df9463d62186256545ae9dcb1a33f0d1fe",
+    "addressesDiffer": true
+  },
+  "requirements": [
+    "deploy-stable-factory-at-new-address",
+    "keep-legacy-factory-and-accounts-bound-to-current-artifact",
+    "verify-stable-factory-runtime-before-new-account-registration",
+    "do-not-rewrite-legacy-smart-account-descriptors",
+    "bind-each-non-legacy-descriptor-to-explicit-artifact-id",
+    "require-independent-review-before-production-promotion"
+  ]
+}

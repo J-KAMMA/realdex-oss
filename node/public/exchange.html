@@ -1,0 +1,20 @@
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RealDEX — 検証付き交換ラボ</title><link rel="stylesheet" href="/node/styles.css"><link rel="stylesheet" href="/node/exchange.css"></head>
+<body><div class="shell exchange-shell"><header><div><a class="brand" href="/node/">RealDEX</a><span class="badge">VERIFIED DISCOVERY · PREVIEW</span></div><span class="muted">発見と、信頼を分ける。</span></header>
+<main><section class="intro"><div class="eyebrow">DISCOVER. VERIFY. COMPARE.</div><h1>交換候補を、<br>同じブロックで確かめる。</h1><p>ノードの署名を確認し、あなたが指定した2つのRPCでFactory・プール・準備高・見積りを照合します。資産は預からず、ウォレットを接続しません。</p></section>
+<div class="notice"><strong>読み取り専用の開発ラボです。</strong> RPCの一致はコンセンサスの証明や運営者の独立性を保証しません。Poolの生成由来・実行コード全体の同定、税付き・制限付きトークンの安全性も証明しません。ここから承認・送信はできません。</div>
+<form id="discovery-form" novalidate><section><div class="section-top"><div><div class="eyebrow">01 / SOURCES</div><h2>情報源を自分で選ぶ</h2></div><a href="/node/">ノードの公開鍵を確認 ↗</a></div>
+<label>このノードの公開鍵（CLIの表示と照合）<input id="relay-key" autocomplete="off" spellcheck="false" maxlength="64" placeholder="64桁の16進数"></label>
+<label>受け入れる元発信者の公開鍵（空欄なら、このノード自身のみ）<textarea id="publisher-keys" rows="2" autocomplete="off" spellcheck="false" placeholder="ノードが中継する発信者も使う場合は、鍵を改行・空白で区切って指定"></textarea></label>
+<div class="field-grid"><label>RPC 1 — 自分が信頼する読み取り先<input id="rpc-one" type="url" spellcheck="false" placeholder="https://… または http://127.0.0.1:8545"></label><label>RPC 2 — 別の読み取り先<input id="rpc-two" type="url" spellcheck="false" placeholder="https://… または http://127.0.0.1:8546"></label></div>
+<p class="muted">ノードが教えたRPCへは接続しません。EIP-1898非対応、別チェーン、情報不一致、古いブロックでは停止します。RPCへは対象アドレスが伝わります。</p></section>
+<section><div class="eyebrow">02 / REQUEST</div><h2>比較する交換を固定する</h2><div class="field-grid"><label>EVMチェーンID<input id="chain-id" value="84532" inputmode="numeric" maxlength="20"></label><label>探索する料率（bps、1〜100）<input id="fee-tiers" value="1, 5, 30" inputmode="numeric" maxlength="80"></label><label>支払うトークンのコントラクト<input id="token-in" spellcheck="false" maxlength="42" placeholder="0x…"></label><label>受け取るトークンのコントラクト<input id="token-out" spellcheck="false" maxlength="42" placeholder="0x…"></label><label>入力額（最小単位の整数）<input id="amount-in" inputmode="numeric" maxlength="34" placeholder="例: 1000000"></label><label>許容スリッページ（bps、0〜1000）<input id="slippage-bps" value="50" inputmode="numeric" maxlength="4"></label></div>
+<p class="muted">シンボルや桁数を推測しません。入力額は最小単位です（例：小数6桁のトークンなら1枚 = 1000000）。最大32組のFactory×料率を照合します。</p>
+<label>任意：費用の事前確認に使う公開アドレス<input id="account" spellcheck="false" maxlength="42" placeholder="自分の公開アドレスのみ。秘密鍵やシードは入力しないでください。"></label>
+<p class="muted">指定時のみ、ボタン操作で残高・既存承認・eth_call・ガス見積りを確認できます。承認が不足していれば止まり、承認取引は作成しません。受取先も同じ公開アドレスです。</p>
+<div class="actions"><button id="verify" type="submit">署名とチェーン上の情報を検証</button><button id="cancel" class="secondary" type="button" disabled>中止</button></div><p id="progress" role="status" aria-live="polite">条件を入力してください。自動接続は行いません。</p></section></form>
+<section id="observation-section" hidden><div class="section-top"><div><div class="eyebrow">03 / OBSERVATION</div><h2>同一ブロックで照合した候補</h2></div><span id="freshness" class="freshness"></span></div><p id="anchor" class="mono muted"></p><div id="summary"></div>
+<div class="table-wrap"><table><thead><tr><th>プール / 料率</th><th>見積受取額</th><th>最低受取額</th><th>追加費用</th></tr></thead><tbody id="pool-rows"></tbody></table></div><p class="muted">参考順：ガス等を引く前の最低受取額。費用が揃っていないため、実質最良の経路は選びません。トークンの転送挙動は未検証です。</p>
+<div class="actions"><button id="simulate" class="secondary" type="button">既存承認とガスを確認（署名なし）</button><button id="split" class="secondary" type="button">この準備高で分割案を計算</button><button id="export" class="secondary" type="button">読み取り証拠をJSON保存</button></div>
+<div id="simulation-result" aria-live="polite"></div><div id="split-result" aria-live="polite"></div>
+<details><summary>除外した候補・未確認の条件</summary><div id="rejections"></div></details></section>
+<footer><a href="/node/">ノードコンソールへ</a><span>秘密鍵なし・資金保管なし・取引送信なし</span></footer></main></div><script type="module" src="/node/exchange.mjs"></script></body></html>

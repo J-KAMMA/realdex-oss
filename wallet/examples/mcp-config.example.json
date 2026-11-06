@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "realdex-wallet": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/REALDEX/wallet/agent/mcp.mjs"],
+      "env": {"REALDEX_WALLET_URL": "http://127.0.0.1:8790"}
+    }
+  }
+}

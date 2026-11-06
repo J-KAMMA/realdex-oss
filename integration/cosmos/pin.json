@@ -1,0 +1,16 @@
+{
+  "schema": "realdex.cosmos-test-tool.v1",
+  "platform": "linux",
+  "arch": "x64",
+  "bytes": 129343704,
+  "sha256": "8bd38fcc35329b331fb73caabdb0287f4cfde62f6593c36fd32e27664619f838",
+  "archiveSha256": "7705b99457444bebaca99e056f6ba2d6e03765e4071236274fd9a5ad9395789d",
+  "archiveBytes": 79879276,
+  "repository": "cosmos/cosmos-sdk",
+  "commit": "c1126e4e5460571378bf9bd9c49cce476b0791e2",
+  "workflowRun": 33866406573,
+  "artifactId": 9934164663,
+  "version": "0.0.0-c1126e4e54",
+  "cosmosSdkVersion": "v0.55.0",
+  "scope": "pinned development simd; disposable single-validator local chain; not Cosmos Hub or production approval"
+}

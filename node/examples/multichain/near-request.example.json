@@ -1,0 +1,8 @@
+{
+  "schema": "realdex.chain-probe-request.v1",
+  "chainId": "near:mainnet",
+  "endpoints": [
+    "https://YOUR-FIRST-PROVIDER.invalid/rpc",
+    "https://YOUR-SECOND-PROVIDER.invalid/rpc"
+  ]
+}

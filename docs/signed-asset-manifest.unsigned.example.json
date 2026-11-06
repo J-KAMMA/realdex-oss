@@ -1,0 +1,20 @@
+{
+  "schema": "localswap.signed-asset-manifest.v1",
+  "sourceId": "example.assets",
+  "revision": 1,
+  "issuedAt": "2026-09-01T00:00:00.000Z",
+  "expiresAt": "2026-09-30T00:00:00.000Z",
+  "assets": [
+    {
+      "assetType": "eip155:1/erc20:0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "symbol": "DAI",
+      "name": "Dai Stablecoin",
+      "decimals": 18,
+      "provenance": "signed-list",
+      "execution": "design-gate"
+    }
+  ],
+  "evidenceUrls": [
+    "https://example.invalid/replace-with-revision-evidence"
+  ]
+}

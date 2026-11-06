@@ -1,0 +1,28 @@
+{
+  "version": "0.20.0-dev.20260906",
+  "productionReady": false,
+  "scope": "native Cosmos SendAuthorization, not a new contract account",
+  "newFeatures": [
+    "owner grant",
+    "grantee execute",
+    "owner revoke",
+    "onchain remaining-spend-denom-recipient-expiration",
+    "strict owner approval",
+    "encrypted durable lifecycle",
+    "real single-simd validation"
+  ],
+  "notImplemented": [
+    "native daily reset",
+    "per-call onchain limit",
+    "AI MCP authz invocation",
+    "Cosmos smart contract wallet",
+    "owner recovery",
+    "passkeys",
+    "ERC-4337 user operations",
+    "independent finality proof",
+    "public-network approval",
+    "all-chain smart accounts"
+  ],
+  "existingFeaturesPreserved": true,
+  "baseArchiveSHA256": "093df0d575d01d7c5fde88d23c28aa6cb6cd2cab27d2f24b7c32a1746b863980"
+}

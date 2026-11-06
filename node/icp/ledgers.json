@@ -1,0 +1,63 @@
+{
+  "schema": "realdex.icrc-candidates.v1",
+  "network": "icp:mainnet",
+  "source": "https://docs.internetcomputer.org/references/chain-key-canister-ids/",
+  "icpSource": "https://docs.internetcomputer.org/guides/digital-assets/ledgers/",
+  "note": "Candidates, not live-verified deployments. Source-chain test tokens below live on ICP mainnet. Fees/decimals must be read at runtime.",
+  "ledgers": [
+    {
+      "label": "ICP",
+      "canister": "ryjl3-tyaaa-aaaaa-aaaba-cai",
+      "underlyingEnvironment": "mainnet",
+      "executable": false
+    },
+    {
+      "label": "ckBTC",
+      "canister": "mxzaz-hqaaa-aaaar-qaada-cai",
+      "underlyingEnvironment": "mainnet",
+      "executable": false
+    },
+    {
+      "label": "ckETH",
+      "canister": "ss2fx-dyaaa-aaaar-qacoq-cai",
+      "underlyingEnvironment": "mainnet",
+      "executable": false
+    },
+    {
+      "label": "ckUSDC",
+      "canister": "xevnm-gaaaa-aaaar-qafnq-cai",
+      "underlyingEnvironment": "mainnet",
+      "executable": false
+    },
+    {
+      "label": "ckUSDT",
+      "canister": "cngnf-vqaaa-aaaar-qag4q-cai",
+      "underlyingEnvironment": "mainnet",
+      "executable": false
+    },
+    {
+      "label": "ckDOGE",
+      "canister": "efmc5-wyaaa-aaaar-qb3wa-cai",
+      "underlyingEnvironment": "mainnet",
+      "executable": false
+    },
+    {
+      "label": "ckSOL",
+      "canister": "ls5lp-lqaaa-aaaar-qb5oa-cai",
+      "underlyingEnvironment": "mainnet",
+      "executable": false
+    },
+    {
+      "label": "ckTestBTC",
+      "canister": "mc6ru-gyaaa-aaaar-qaaaq-cai",
+      "underlyingEnvironment": "test-source-chain",
+      "executable": false
+    },
+    {
+      "label": "ckTestETH",
+      "canister": "apia6-jaaaa-aaaar-qabma-cai",
+      "underlyingEnvironment": "test-source-chain",
+      "executable": false
+    }
+  ]
+}

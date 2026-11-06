@@ -1,0 +1,43 @@
+{
+  "servedRelease": "base-sepolia-2653db491647",
+  "scope": "built configured app on public Base Sepolia; faults injected at the wallet and at the reader, sends counted in the helper",
+  "cases": [
+    {
+      "case": "reader on the wrong chain",
+      "message": "確認条件を満たさないため停止しました（DEPLOYMENT_RPC_CHAIN_MISMATCH）。入力・接続・検証期限を確認し、送信済みの可能性があれば履歴を照会してください。",
+      "verificationBlocked": true,
+      "stillUnverified": true,
+      "sendsRequested": 0
+    },
+    {
+      "case": "wallet rejection",
+      "message": "操作は停止しました。履歴と承認残高を確認してください。",
+      "sendsRequested": 1,
+      "broadcast": 0
+    },
+    {
+      "case": "repeated execute clicks",
+      "clicks": 6,
+      "sendsRequested": 1,
+      "broadcast": 1,
+      "hashes": [
+        "0x6de1b86c3edcaef534c28e18db898792dd86d993913d3ed74d673a5d70ddc2e9"
+      ]
+    },
+    {
+      "case": "lost answer after a real send",
+      "message": "処理を完了できませんでした。送信された可能性がある場合は再送せず、履歴とウォレットを確認してください。",
+      "broadcastHashes": [
+        "0x33950dd4d4ad260c07daace3e7ec14970a6033fe026caf1052efc4c5c3d1fbfb"
+      ],
+      "resentAfterLoss": false,
+      "firstTabSeesOperation": true,
+      "firstTabCanStartAnother": false,
+      "secondTabSeesBeforeVerify": true,
+      "secondTabSeesOperation": true,
+      "secondTabCanStartAnother": false
+    }
+  ],
+  "browser": "152.0.7977.65",
+  "ranAt": "2026-09-04T07:01:56.808Z"
+}

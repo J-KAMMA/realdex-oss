@@ -1,0 +1,91 @@
+name: Runtime integration / strict acceptance (no deployment)
+on:
+  workflow_dispatch:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: local-acceptance-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  local-acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7 observed 2026-09-05
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7 observed 2026-09-05
+        with:
+          node-version: '24.14.0'
+          package-manager-cache: false
+      - name: Install exact package manager and frozen dependencies
+        run: |
+          npm install --global pnpm@11.25.0 --ignore-scripts
+          pnpm install --frozen-lockfile --ignore-scripts
+      - name: Provision fixed Anvil for the dependency-independent native EVM gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="$(node --input-type=module -e 'import {ANVIL_PIN} from "./integration/anvil/toolchain.mjs"; console.log(ANVIL_PIN.releaseUrl)')"
+          curl --fail --location --proto '=https' --tlsv1.2 "$URL" -o "$RUNNER_TEMP/realdex-foundry.tar.gz"
+          python3 integration/anvil/provision.py --archive "$RUNNER_TEMP/realdex-foundry.tar.gz" --output "$RUNNER_TEMP/realdex-anvil"
+          echo "REALDEX_ANVIL_BINARY=$RUNNER_TEMP/realdex-anvil/anvil" >> "$GITHUB_ENV"
+      - name: Provision original compiler (verify before execute)
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --proto '=https' --tlsv1.2 'https://binaries.soliditylang.org/linux-amd64/solc-linux-amd64-v0.8.24%2Bcommit.e11b9ed9' -o "$RUNNER_TEMP/realdex-solc"
+          echo "fb03a29a517452b9f12bcf459ef37d0a543765bb3bbc911e70a87d6a37c30d5f  $RUNNER_TEMP/realdex-solc" | sha256sum --check --strict
+          chmod 500 "$RUNNER_TEMP/realdex-solc"
+          echo "REALDEX_SOLC_BINARY=$RUNNER_TEMP/realdex-solc" >> "$GITHUB_ENV"
+      - name: Provision isolated browser test environment
+        run: |
+          python3 -m venv "$RUNNER_TEMP/realdex-browser-venv"
+          "$RUNNER_TEMP/realdex-browser-venv/bin/pip" install -r integration/browser-requirements.txt
+          "$RUNNER_TEMP/realdex-browser-venv/bin/python" -m playwright install --with-deps chromium
+          echo "$RUNNER_TEMP/realdex-browser-venv/bin" >> "$GITHUB_PATH"
+      - name: Provision all nine previously blocked runtime gates from unchanged pins
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I dev/runtime-provision.py --download --output "$RUNNER_TEMP/realdex-runtimes"
+          cat "$RUNNER_TEMP/realdex-runtimes/github.env" >> "$GITHUB_ENV"
+          cp "$RUNNER_TEMP/realdex-runtimes/provision.json" runtime-provision-ci.json
+      - name: All provisioned runtime checks on PRs; strict full acceptance on manual runs
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          profile=strict
+          if [ "$EVENT_NAME" = pull_request ]; then profile=runtime; fi
+          node dev/ci-acceptance.mjs --profile "$profile" --output acceptance-ci
+      - name: Print gate summary even on failure
+        if: always()
+        run: |
+          node -e 'const fs=require("node:fs");const p="acceptance-ci/acceptance.json";if(fs.existsSync(p)){const r=JSON.parse(fs.readFileSync(p));console.log(JSON.stringify({sourceDigest:r.sourceDigest,gates:r.gates,fullLocalAcceptancePassed:r.fullLocalAcceptancePassed,productionReady:r.productionReady},null,2));}else{console.log("Full acceptance did not complete; not approved.");}'
+      - name: Save source-bound acceptance diagnostics, including failed gates
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: local-acceptance-${{ github.sha }}-${{ github.run_attempt }}
+          path: |
+            runtime-provision-ci.json
+            acceptance-ci/acceptance.json
+            acceptance-ci/ci-profile.json
+            acceptance-ci/ci-summary.md
+            acceptance-ci.runner.log
+            acceptance-ci/source-before.json
+            acceptance-ci/source-after.json
+            acceptance-ci/doctor.json
+            acceptance-ci/*-status.json
+            acceptance-ci/*.log
+            acceptance-ci/browser-http/browser-http.json
+          if-no-files-found: error
+          retention-days: 14
+# Allowlisted test diagnostics only: never upload wallet stores, capabilities or node data.
+# Deliberately no deploy, publish, wallet secret, live-chain RPC or workflow_run trigger.
+
+# Full verifier and all gates still execute. PR runtime profile is NOT a release gate.
+# Only Stellar implementation and smart-account review blockers may remain; all nine configured runtime gates are mandatory.

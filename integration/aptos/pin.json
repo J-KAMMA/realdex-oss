@@ -1,0 +1,16 @@
+{
+  "schema": "realdex.aptos-test-pin.v1",
+  "version": "9.5.1",
+  "platform": "linux",
+  "arch": "x64",
+  "bytes": 135145432,
+  "sha256": "374c13fe76ebef8990d70d8b54112af47abd0b9a6ebf079c964b04af7ae1734f",
+  "sourceRepo": "aptos-labs/aptos-cli-releases",
+  "sourceCommit": "1b4ab82669c7a65505438da49169638e9b4d2e74",
+  "sourceTag": "aptos-cli-v9.5.1",
+  "runId": 32913942461,
+  "artifactId": 9588053995,
+  "archiveSha256": "f983b46af3c0d3c3ad414a3ff15f9b35031339620c6c2525c1dbf34fb32d6d63",
+  "coreGitHash": "6d836beedc56fc70c54f3b3046d1d248d850c64b",
+  "testOnly": true
+}

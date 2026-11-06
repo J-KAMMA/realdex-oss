@@ -1,0 +1,73 @@
+{
+  "servedRelease": "base-sepolia-5885d029020b",
+  "scope": "built configured app on public Base Sepolia; no address from any retired factory's registry may appear, and the verified factory's own registry must stay inside the verified pair",
+  "cases": [
+    {
+      "case": "configured surface",
+      "retiredAddressesChecked": 15,
+      "registryDerivedAddressesChecked": 12,
+      "retiredRegistries": [
+        {
+          "release": "20260903175241",
+          "factory": "0xb40566CE41F1b9602d20CCFcC6C8cE5658712659",
+          "pools": 1
+        },
+        {
+          "release": "af4f2dd618e8",
+          "factory": "0x49694599e5B1aA4AD172F702ee2317B11B21606b",
+          "pools": 1
+        },
+        {
+          "release": "b7464b3858f6",
+          "factory": "0xb6228A7454D8a3CDcAA5E13F65d5aCc27863903f",
+          "pools": 2
+        }
+      ],
+      "knownOutOfScopeFoundInRegistries": true,
+      "leakedOutOfScope": [],
+      "forbiddenControls": [],
+      "directions": [
+        "自分で確認して選択",
+        "QA SIGNING TRANSPORT（自己申告）",
+        "AMBR → JADE",
+        "JADE → AMBR"
+      ],
+      "inScopeAddressesShown": true
+    },
+    {
+      "case": "unsupported wallet offered",
+      "listedOptions": [
+        "自分で確認して選択",
+        "QA FOREIGN WALLET（初版対象外）",
+        "QA SIGNING TRANSPORT（自己申告）",
+        "AMBR → JADE",
+        "JADE → AMBR"
+      ],
+      "foreignListed": true,
+      "connectEnabledForForeign": false
+    },
+    {
+      "case": "supported wallet on the wrong chain",
+      "walletChainId": "0x1",
+      "message": "ウォレットとRPCをBase Sepolia（84532）に合わせてください。自動でネットワークは切り替えません。",
+      "showedConnectedAccount": false,
+      "quoteEnabled": false
+    },
+    {
+      "case": "the verified factory's registry",
+      "factory": "0x1b2B307F1AaE38f029290eD5AD7CC459069851B2",
+      "pools": [
+        {
+          "pool": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+          "token0": "0x973aDa85eA6Eb4C9C2406e80a7E86c6b8F6cc31a",
+          "token1": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996"
+        }
+      ],
+      "verifiedPoolListed": true,
+      "poolsNamingAnotherFactory": [],
+      "poolsOutsideTheVerifiedPair": []
+    }
+  ],
+  "browser": "152.0.7977.77",
+  "ranAt": "2026-09-04T20:43:02.152Z"
+}

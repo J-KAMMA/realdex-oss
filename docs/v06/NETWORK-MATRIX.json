@@ -1,0 +1,1545 @@
+{
+  "schema": "realdex.v06-network-matrix.v1",
+  "distinctCandidateCount": 164,
+  "previousRows": 138,
+  "extensionRows": 28,
+  "overlap": 2,
+  "newIdentifiers": 26,
+  "icpLedgerCandidates": 9,
+  "liveNewNetworkTests": false,
+  "newSwapsExecutable": false,
+  "profiles": [
+    {
+      "id": "algorand:betanet-v1.0",
+      "name": "Algorand betanet-v1.0",
+      "family": "algorand",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "algorand:mainnet-v1.0",
+      "name": "Algorand mainnet-v1.0",
+      "family": "algorand",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "algorand:testnet-v1.0",
+      "name": "Algorand testnet-v1.0",
+      "family": "algorand",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "aptos:1",
+      "name": "Aptos Mainnet",
+      "family": "aptos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "aptos:2",
+      "name": "Aptos Testnet",
+      "family": "aptos",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "bitcoin-cash:mainnet",
+      "name": "Bitcoin Cash Node mainnet",
+      "family": "utxo-core",
+      "environment": "mainnet",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "bitcoin-cash:regtest",
+      "name": "Bitcoin Cash Node regtest",
+      "family": "utxo-core",
+      "environment": "local",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "bitcoin-cash:testnet",
+      "name": "Bitcoin Cash Node testnet",
+      "family": "utxo-core",
+      "environment": "testnet",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "bitcoin:main",
+      "name": "Bitcoin",
+      "family": "bitcoin",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "bitcoin:regtest",
+      "name": "Bitcoin Regtest",
+      "family": "bitcoin",
+      "environment": "local",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "bitcoin:signet",
+      "name": "Bitcoin Signet",
+      "family": "bitcoin",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "bitcoin:test",
+      "name": "Bitcoin Testnet3",
+      "family": "bitcoin",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "bitcoin:testnet4",
+      "name": "Bitcoin Testnet4",
+      "family": "bitcoin",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:akashnet-2",
+      "name": "Akash",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:axelar-dojo-1",
+      "name": "Axelar",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:celestia",
+      "name": "Celestia",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:cosmoshub-4",
+      "name": "Cosmos Hub",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:dydx-mainnet-1",
+      "name": "dYdX",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:injective-1",
+      "name": "Injective",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:juno-1",
+      "name": "Juno",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:neutron-1",
+      "name": "Neutron",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:noble-1",
+      "name": "Noble",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:osmosis-1",
+      "name": "Osmosis",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:pacific-1",
+      "name": "Sei Cosmos",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:phoenix-1",
+      "name": "Terra",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:pulsar-3",
+      "name": "Secret Network Pulsar-3",
+      "family": "cometbft",
+      "environment": "testnet",
+      "privacyModel": "confidential-contracts",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "cosmos:secret-4",
+      "name": "Secret Network",
+      "family": "cometbft",
+      "environment": "mainnet",
+      "privacyModel": "confidential-contracts",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": true
+    },
+    {
+      "id": "cosmos:stargaze-1",
+      "name": "Stargaze",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "cosmos:stride-1",
+      "name": "Stride",
+      "family": "cosmos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "dash:mainnet",
+      "name": "Dash Core mainnet",
+      "family": "utxo-core",
+      "environment": "mainnet",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "dash:regtest",
+      "name": "Dash Core regtest",
+      "family": "utxo-core",
+      "environment": "local",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "dash:testnet",
+      "name": "Dash Core testnet",
+      "family": "utxo-core",
+      "environment": "testnet",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "dogecoin:mainnet",
+      "name": "Dogecoin mainnet",
+      "family": "utxo-core",
+      "environment": "mainnet",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "dogecoin:regtest",
+      "name": "Dogecoin regtest",
+      "family": "utxo-core",
+      "environment": "local",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "dogecoin:testnet",
+      "name": "Dogecoin testnet",
+      "family": "utxo-core",
+      "environment": "testnet",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "eip155:1",
+      "name": "Ethereum",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:10",
+      "name": "Optimism",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:100",
+      "name": "Gnosis",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1001",
+      "name": "Kaia Kairos",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:10143",
+      "name": "Monad Testnet",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:106",
+      "name": "Velas",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1088",
+      "name": "Metis",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:109",
+      "name": "Shibarium",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1101",
+      "name": "Polygon zkEVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1111",
+      "name": "WEMIX",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:11155111",
+      "name": "Ethereum Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:11155420",
+      "name": "Optimism Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1116",
+      "name": "Core",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:122",
+      "name": "Fuse",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1284",
+      "name": "Moonbeam",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1285",
+      "name": "Moonriver",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1287",
+      "name": "Moonbase Alpha",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:130",
+      "name": "Unichain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1313161554",
+      "name": "Aurora",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1329",
+      "name": "Sei EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:137",
+      "name": "Polygon PoS",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:14",
+      "name": "Flare",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:146",
+      "name": "Sonic",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:148",
+      "name": "Shimmer EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1625",
+      "name": "Gravity Alpha",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:1666600000",
+      "name": "Harmony Shard 0",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:167000",
+      "name": "Taiko",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:16718",
+      "name": "AirDAO",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:169",
+      "name": "Manta Pacific",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:19",
+      "name": "Songbird",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:196",
+      "name": "X Layer",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:2000",
+      "name": "Dogechain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:200901",
+      "name": "Bitlayer",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:204",
+      "name": "opBNB",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:21000000",
+      "name": "Corn",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:2222",
+      "name": "Kava EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:223",
+      "name": "B2 Network",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:23294",
+      "name": "Oasis Sapphire",
+      "family": "evm",
+      "environment": "mainnet",
+      "privacyModel": "confidential-contracts",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": true
+    },
+    {
+      "id": "eip155:23295",
+      "name": "Oasis Sapphire Testnet",
+      "family": "evm",
+      "environment": "testnet",
+      "privacyModel": "confidential-contracts",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "eip155:25",
+      "name": "Cronos",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:250",
+      "name": "Fantom Opera",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:252",
+      "name": "Fraxtal",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:2741",
+      "name": "Abstract",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:288",
+      "name": "Boba",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:30",
+      "name": "Rootstock",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:300",
+      "name": "ZKsync Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:31337",
+      "name": "Local EVM",
+      "family": "evm",
+      "environment": "local",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:314",
+      "name": "Filecoin EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:324",
+      "name": "ZKsync Era",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:33139",
+      "name": "ApeChain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:336",
+      "name": "Shiden EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:34443",
+      "name": "Mode",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:40",
+      "name": "Telos EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:4200",
+      "name": "Merlin",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:42161",
+      "name": "Arbitrum One",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:421614",
+      "name": "Arbitrum Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:42220",
+      "name": "Celo",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:42262",
+      "name": "Oasis Emerald",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:43113",
+      "name": "Avalanche Fuji",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:43114",
+      "name": "Avalanche C-Chain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:4337",
+      "name": "Beam",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:4689",
+      "name": "IoTeX",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:480",
+      "name": "World Chain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:50",
+      "name": "XDC Network",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:5000",
+      "name": "Mantle",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:5003",
+      "name": "Mantle Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:534351",
+      "name": "Scroll Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:534352",
+      "name": "Scroll",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:56",
+      "name": "BNB Smart Chain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:57",
+      "name": "Syscoin",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:57073",
+      "name": "Ink",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:59141",
+      "name": "Linea Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:59144",
+      "name": "Linea",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:592",
+      "name": "Astar EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:60808",
+      "name": "BOB",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:61",
+      "name": "Ethereum Classic",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:660279",
+      "name": "Xai",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:7000",
+      "name": "ZetaChain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:7777777",
+      "name": "Zora",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:80002",
+      "name": "Polygon Amoy",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:80094",
+      "name": "Berachain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:81457",
+      "name": "Blast",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:8217",
+      "name": "Kaia",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:8453",
+      "name": "Base",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:84532",
+      "name": "Base Sepolia",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:8822",
+      "name": "IOTA EVM",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:888",
+      "name": "Wanchain",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:88888",
+      "name": "Chiliz",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:9001",
+      "name": "Evmos",
+      "family": "evm",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "eip155:97",
+      "name": "BSC Testnet",
+      "family": "evm",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "icp:local-development",
+      "name": "ICP local development instance",
+      "family": "icp",
+      "environment": "local",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "icp:mainnet",
+      "name": "Internet Computer",
+      "family": "icp",
+      "environment": "mainnet",
+      "privacyModel": "public",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "litecoin:mainnet",
+      "name": "Litecoin mainnet",
+      "family": "utxo-core",
+      "environment": "mainnet",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "litecoin:regtest",
+      "name": "Litecoin regtest",
+      "family": "utxo-core",
+      "environment": "local",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "litecoin:testnet",
+      "name": "Litecoin testnet",
+      "family": "utxo-core",
+      "environment": "testnet",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "monero:mainnet",
+      "name": "Monero mainnet",
+      "family": "monero",
+      "environment": "mainnet",
+      "privacyModel": "shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "monero:stagenet",
+      "name": "Monero stagenet",
+      "family": "monero",
+      "environment": "testnet",
+      "privacyModel": "shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "monero:testnet",
+      "name": "Monero testnet",
+      "family": "monero",
+      "environment": "testnet",
+      "privacyModel": "shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "namada:housefire",
+      "name": "Namada Housefire",
+      "family": "cometbft",
+      "environment": "testnet",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "namada:mainnet",
+      "name": "Namada",
+      "family": "cometbft",
+      "environment": "mainnet",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "near:mainnet",
+      "name": "NEAR mainnet",
+      "family": "near",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "near:testnet",
+      "name": "NEAR testnet",
+      "family": "near",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "penumbra:mainnet",
+      "name": "Penumbra",
+      "family": "cometbft",
+      "environment": "mainnet",
+      "privacyModel": "shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "penumbra:phobos-3",
+      "name": "Penumbra Phobos-3",
+      "family": "cometbft",
+      "environment": "testnet",
+      "privacyModel": "shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "solana:devnet",
+      "name": "Solana Devnet",
+      "family": "solana",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "solana:mainnet-beta",
+      "name": "Solana",
+      "family": "solana",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "solana:testnet",
+      "name": "Solana Testnet",
+      "family": "solana",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "starknet:mainnet",
+      "name": "Starknet mainnet",
+      "family": "starknet",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "starknet:sepolia",
+      "name": "Starknet sepolia",
+      "family": "starknet",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "stellar:public",
+      "name": "Stellar public",
+      "family": "stellar",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "stellar:testnet",
+      "name": "Stellar testnet",
+      "family": "stellar",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "substrate:kusama",
+      "name": "Kusama",
+      "family": "substrate",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "substrate:polkadot",
+      "name": "Polkadot",
+      "family": "substrate",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "substrate:polkadot-asset-hub",
+      "name": "Polkadot Asset Hub",
+      "family": "substrate",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "substrate:westend",
+      "name": "Westend",
+      "family": "substrate",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "sui:35834a8a",
+      "name": "Sui Mainnet",
+      "family": "sui",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "sui:4c78adac",
+      "name": "Sui Testnet",
+      "family": "sui",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "tezos:mainnet",
+      "name": "Tezos",
+      "family": "tezos",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "ton:mainnet",
+      "name": "TON mainnet",
+      "family": "ton",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "ton:testnet",
+      "name": "TON testnet",
+      "family": "ton",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "tron:mainnet",
+      "name": "TRON mainnet",
+      "family": "tron",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "tron:nile",
+      "name": "TRON nile",
+      "family": "tron",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "tron:shasta",
+      "name": "TRON shasta",
+      "family": "tron",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "xrpl:devnet",
+      "name": "XRP Ledger devnet",
+      "family": "xrpl",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "xrpl:mainnet",
+      "name": "XRP Ledger mainnet",
+      "family": "xrpl",
+      "environment": "mainnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "xrpl:testnet",
+      "name": "XRP Ledger testnet",
+      "family": "xrpl",
+      "environment": "testnet",
+      "scope": "v0.5 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": false
+    },
+    {
+      "id": "zcash:mainnet",
+      "name": "Zcash mainnet",
+      "family": "utxo-core",
+      "environment": "mainnet",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "zcash:regtest",
+      "name": "Zcash regtest",
+      "family": "utxo-core",
+      "environment": "local",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    },
+    {
+      "id": "zcash:testnet",
+      "name": "Zcash testnet",
+      "family": "utxo-core",
+      "environment": "testnet",
+      "privacyModel": "optional-shielded",
+      "scope": "v0.6 read candidate",
+      "status": "candidate-unverified",
+      "extensionAdded": true,
+      "previouslyListed": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {createIdentity,createAnnouncement,createSnapshot,signPayload} from '../lib/protocol.mjs';
+import {VerifiedCatalogue,readBoundedJson,safeEndpoint} from '../verified/catalogue.mjs';
+import {NOW,F,candidate} from './verified-fixtures.mjs';
+const nonce='e'.repeat(64);
+function setup(){const relay=createIdentity(),source=createIdentity();let clock=NOW;
+  const client=new VerifiedCatalogue({relayPublicKey:relay.publicKey,publisherKeys:[relay.publicKey,source.publicKey],now:()=>clock});
+  const announce=(revision=1,factories=[candidate()])=>createAnnouncement(source,revision,factories,clock);
+  const snapshot=(list=[announce()])=>createSnapshot(relay,nonce,list,clock);
+  return {relay,source,client,announce,snapshot,setTime:t=>clock=t};}
+test('browser independently verifies relay and original publisher',async()=>{const f=setup(),result=await f.client.verify(f.snapshot(),nonce);assert.equal(result.candidates[0].address,F);assert.equal(result.candidates[0].sources[0].publicKey,f.source.publicKey);assert.equal(result.executable,false);});
+for(const field of ['signature','nonce','relay','expiresAt'])test(`reject tampered signed snapshot: ${field}`,async()=>{
+  const f=setup(),s=f.snapshot();if(field==='signature')s.signature='0'.repeat(128);
+  if(field==='nonce')s.payload.nonce='f'.repeat(64);
+  if(field==='relay')s.payload.publisher=createIdentity().publicKey;
+  if(field==='expiresAt')s.payload.expiresAt=NOW-1;
+  await assert.rejects(f.client.verify(s,nonce));
+});
+test('outer valid signature cannot bless forged inner announcement',async()=>{const f=setup(),a=f.announce();a.payload.factories[0].address='0x'+'b'.repeat(40);const r=await f.client.verify(f.snapshot([a]),nonce);assert.equal(r.candidates.length,0);assert.equal(r.rejected[0].code,'SIGNATURE_INVALID');});
+test('unknown original publisher rejected despite trusted relay',async()=>{const f=setup(),a=createAnnouncement(createIdentity(),1,[candidate()],NOW);const r=await f.client.verify(f.snapshot([a]),nonce);assert.equal(r.candidates.length,0);assert.equal(r.rejected[0].code,'PUBLISHER_NOT_ALLOWED');});
+test('session rollback and same revision equivocation rejected',async()=>{const f=setup();await f.client.verify(f.snapshot([f.announce(3)]),nonce);let r=await f.client.verify(f.snapshot([f.announce(2)]),nonce);assert.equal(r.rejected[0].code,'CATALOGUE_ROLLBACK');r=await f.client.verify(f.snapshot([f.announce(3,[])]),nonce);assert.equal(r.rejected[0].code,'CATALOGUE_EQUIVOCATION');});
+test('same revision refreshed announcement accepted',async()=>{const f=setup();await f.client.verify(f.snapshot(),nonce);f.setTime(NOW+1000);assert.equal((await f.client.verify(f.snapshot(),nonce)).candidates.length,1);});
+test('later revision can remove candidates',async()=>{const f=setup();await f.client.verify(f.snapshot(),nonce);assert.equal((await f.client.verify(f.snapshot([f.announce(2,[])]),nonce)).candidates.length,0);});
+test('duplicate publishers fail closed',async()=>{const f=setup();await assert.rejects(f.client.verify(f.snapshot([f.announce(),f.announce()]),nonce),/DUPLICATE/);});
+test('clock rollback rejected',async()=>{const f=setup();await f.client.verify(f.snapshot(),nonce);f.setTime(NOW-1);await assert.rejects(f.client.verify(f.snapshot(),nonce),/CLOCK/);});
+test('caller mutation during signature awaits cannot alter accepted data',async()=>{const f=setup(),s=f.snapshot(),pending=f.client.verify(s,nonce);s.payload.announcements[0].payload.factories=[];const result=await pending;assert.equal(result.candidates.length,1);});
+test('concurrent verification is explicitly blocked',async()=>{const f=setup(),pending=f.client.verify(f.snapshot(),nonce);await assert.rejects(f.client.verify(f.snapshot(),nonce),/IN_PROGRESS/);await pending;});
+test('missing crypto/future clock cannot create trusted stale evidence',async()=>{const f=setup(),s=f.snapshot();f.setTime(NOW+15001);await assert.rejects(f.client.verify(s,nonce),/EXPIRED/);});
+test('deduplicates factory and retains both original sources',async()=>{const f=setup(),s=f.snapshot([f.announce(),createAnnouncement(f.relay,1,[candidate()],NOW)]),r=await f.client.verify(s,nonce);assert.equal(r.candidates.length,1);assert.equal(r.candidates[0].sources.length,2);});
+for(const url of ['http://example.com/','file:///etc/passwd','https://u:p@example.com','https://example.com/#secret','javascript:alert(1)'])test(`unsafe endpoint refused ${url}`,()=>assert.throws(()=>safeEndpoint(url)));
+test('cross-origin catalogue access requires explicit opt-in',()=>assert.throws(()=>safeEndpoint('https://b.example',{base:'https://a.example',sameOrigin:true}),/SAME_ORIGIN/));
+test('bounded JSON accepts application/json',async()=>assert.deepEqual(await readBoundedJson(new Response('{"ok":true}',{headers:{'content-type':'application/json'}})),{ok:true}));
+for(const [body,headers,error] of [['{}',{'content-type':'text/html'},'CONTENT_TYPE'],['x',{'content-type':'application/json'},'JSON_INVALID'],['{}',{'content-type':'application/json','content-length':'99999'},'TOO_LARGE'],['{"long":"'+ 'x'.repeat(100)+'"}',{'content-type':'application/json'},'TOO_LARGE']])test(`bounded JSON refuses ${error}`,async()=>await assert.rejects(readBoundedJson(new Response(body,{headers}),32),new RegExp(error)));
+test('pull is nonce-bound, GET-only, credential-free and non-redirecting',async()=>{const f=setup();let requested;
+ const r=await f.client.pull('http://127.0.0.1:8787',{fetchImpl:async(url,opts)=>{requested={url,opts};const n=new URL(url).searchParams.get('nonce');return new Response(JSON.stringify(createSnapshot(f.relay,n,[f.announce()],NOW)),{headers:{'content-type':'application/json'}});}});
+ assert.equal(r.candidates.length,1);assert.equal(requested.opts.method,'GET');assert.equal(requested.opts.credentials,'omit');assert.equal(requested.opts.redirect,'error');assert.equal(new URL(requested.url).pathname,'/v1/catalogue');});

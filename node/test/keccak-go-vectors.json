@@ -1,0 +1,366 @@
+{
+  "reference": "Go vendored golang.org/x/crypto/sha3.NewLegacyKeccak256 (purego)",
+  "go": "go version go1.23.2 linux/amd64",
+  "vectors": [
+    {
+      "seed": 0,
+      "length": 0,
+      "digest": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+    },
+    {
+      "seed": 1,
+      "length": 1,
+      "digest": "0x967f2a2c7f3d22f9278175c1e6aa39cf9171db91dceacd5ee0f37c2e507b5abe"
+    },
+    {
+      "seed": 2,
+      "length": 2,
+      "digest": "0xf04ee2cd03caa4257be4c216d770ff03bc451221e8c71ae8753a39895f2de25f"
+    },
+    {
+      "seed": 3,
+      "length": 31,
+      "digest": "0x8804ce86122960a0a51dc03993638c162d4eb927b61a225cdd65aeef97d9d7fe"
+    },
+    {
+      "seed": 4,
+      "length": 32,
+      "digest": "0xef61db86efd6b7db685fae3dbd124e74850c2c11de981533bf8c0bbc8b3195fb"
+    },
+    {
+      "seed": 5,
+      "length": 55,
+      "digest": "0x4d6ab0542dfa0d5980eb674a93dc0a4d78ed778e61b2d9fd27f914ac482cb2fb"
+    },
+    {
+      "seed": 6,
+      "length": 64,
+      "digest": "0xb62b135177c6d1343bc94dd566529e15300978ff3dfc1fdb7653a18935a8df02"
+    },
+    {
+      "seed": 7,
+      "length": 65,
+      "digest": "0x026e39123fb8928c3b429b0ba4de654873e4656f9cdb09a77553f529da986bc7"
+    },
+    {
+      "seed": 8,
+      "length": 135,
+      "digest": "0x47f45c2283d9ed314a05ba17eaf063f80dd0176d47ffb833869df8824eb9d0f6"
+    },
+    {
+      "seed": 9,
+      "length": 136,
+      "digest": "0x7de9a3b5fa31c57e2ca2045fb7d891b114d2e2c5f4fc7ba01a7e464b224a1860"
+    },
+    {
+      "seed": 10,
+      "length": 137,
+      "digest": "0x554d90292e13f29a8638e2cab136fd921b3b3a8d8cceff710db1de097632f041"
+    },
+    {
+      "seed": 11,
+      "length": 255,
+      "digest": "0x4409db246a343ed8354efb9d4e0b80d919bc6f6a75273a6f6b4ffe12c0b1f34b"
+    },
+    {
+      "seed": 12,
+      "length": 256,
+      "digest": "0xc73ad4c76832692c6b2366884a765674ad90c85d8e24ea08e38e2fdf648a36ae"
+    },
+    {
+      "seed": 13,
+      "length": 271,
+      "digest": "0xc303a86fee12d0152e4a22b7da3354be8aa186c0feaf0d4389377e92dc67eab0"
+    },
+    {
+      "seed": 14,
+      "length": 272,
+      "digest": "0x5246cefb993108b9fff0420d479c994032846703db60db895aeb2c88e384e58a"
+    },
+    {
+      "seed": 15,
+      "length": 273,
+      "digest": "0x707e8031043d29c7de14625fac2bcc2200942c27a98ce10d078acebd325b75eb"
+    },
+    {
+      "seed": 16,
+      "length": 511,
+      "digest": "0x7ee2d299fe5185c180fef4473c335b2053c3d40b37ee86725dbc3b4a73e91710"
+    },
+    {
+      "seed": 17,
+      "length": 512,
+      "digest": "0xc6b7372798125b2d4122ffede7a1f088351a69be944b672b535e0cd44ace9bfe"
+    },
+    {
+      "seed": 18,
+      "length": 1024,
+      "digest": "0x5d6b5e82787381796d305e1cb29a66e12577fc08055cd9d5af00975e951aadc4"
+    },
+    {
+      "seed": 19,
+      "length": 4096,
+      "digest": "0xd5ae065ef9187d652d18ca2d79723adcc90ec7b6aee00457b1c3f87094696844"
+    },
+    {
+      "seed": 20,
+      "length": 24576,
+      "digest": "0xb8d6b4d233dd6a3dc5734db32288b721152a34ef0d8d70f0a81a7eeea8899bfd"
+    },
+    {
+      "seed": 21,
+      "length": 131072,
+      "digest": "0x24a12f728424134f2f7a7055372f4d8dfcc75e1ede962d48b5bfbe156bd171c0"
+    },
+    {
+      "seed": 100,
+      "length": 29,
+      "digest": "0xff6dd71755ff7aafb1f278a5cfd5224efc175842dcd80e09538abe85eefcd5e8"
+    },
+    {
+      "seed": 101,
+      "length": 166,
+      "digest": "0x8e649b40ae7b50817a42515f5872429c258d0abba32882cbdc88d95a200632fd"
+    },
+    {
+      "seed": 102,
+      "length": 303,
+      "digest": "0xec016bddd3d2377e981cbb7ce50d4427ee7c22a3e66fdde9bc576f1b948e4f5e"
+    },
+    {
+      "seed": 103,
+      "length": 440,
+      "digest": "0x34bfe569d7fc9fddf2a30e7e47352e1890d4057a10730195b51f454aa4343d1e"
+    },
+    {
+      "seed": 104,
+      "length": 577,
+      "digest": "0xbfaf144fce415f0a50b1324654eff8ea472eefff52d0b5cb0f5b3dda5b19800c"
+    },
+    {
+      "seed": 105,
+      "length": 714,
+      "digest": "0xba3f8aa55c675ff22f433c4036455b2f14d9a9337b251889ee5d63caa6250f91"
+    },
+    {
+      "seed": 106,
+      "length": 851,
+      "digest": "0x8a6d9244d97ae5d6bac4c2e7ea4842bf6677005cef7e28e8e3e2f9f80c6de706"
+    },
+    {
+      "seed": 107,
+      "length": 988,
+      "digest": "0x83ff9e905716e6d28a57de2efd0433a94c5a2acca9e0b8df51aef13c7d8383f4"
+    },
+    {
+      "seed": 108,
+      "length": 1125,
+      "digest": "0x23e693276c1dc1137baf17de8655c4dff866df98063400ad1049e29d7b96ee26"
+    },
+    {
+      "seed": 109,
+      "length": 1262,
+      "digest": "0xce4de3a526cb09dc1114adda2d8a1afb63ff2a5b44fa81a8b6f2c33b9ac5f34d"
+    },
+    {
+      "seed": 110,
+      "length": 1399,
+      "digest": "0x78c26c541144fbd2578ba9971488c58984e52d5c07c0a914f9cb1b050516f263"
+    },
+    {
+      "seed": 111,
+      "length": 1536,
+      "digest": "0xd4e2d7f5bf4ac15a8496ef8a9afa1708062075334754694e2f235316faf0a7bf"
+    },
+    {
+      "seed": 112,
+      "length": 1673,
+      "digest": "0x1cf3d61d208c552d69f562f57ee520a7f916f5fb8bacf8e1f67dd63c8c66f7b6"
+    },
+    {
+      "seed": 113,
+      "length": 1810,
+      "digest": "0x67307926cf6886da23ce44fe1712129bd64aa10d25c10418c13725d80aabdd1a"
+    },
+    {
+      "seed": 114,
+      "length": 1947,
+      "digest": "0xbd68cb183468dd3e60e993f82e7c68331fc5766700be55b3f35e5079f29b1be1"
+    },
+    {
+      "seed": 115,
+      "length": 2084,
+      "digest": "0xa73cc6fe0f77d7de589aa64601fd75338aaa670691be4a45dfc3c1fbfda58c03"
+    },
+    {
+      "seed": 116,
+      "length": 2221,
+      "digest": "0xdf0db0f2cb13a0ea5f8472d89e55501379f1094cb2a5f1495b7b9db403763a55"
+    },
+    {
+      "seed": 117,
+      "length": 58,
+      "digest": "0xf4f710492cf5780d080ba6eadf04e7497f159372f1e4aa58302b32baae5449c2"
+    },
+    {
+      "seed": 118,
+      "length": 195,
+      "digest": "0xb5dcf94b1f321ae9129c781b8eb5cec2e8457f910f1348cd22ef961c938b6856"
+    },
+    {
+      "seed": 119,
+      "length": 332,
+      "digest": "0x9115a9deb63a3a997bf19c49a1eacce6cecdb06ff0e07473d07928e941eef370"
+    },
+    {
+      "seed": 120,
+      "length": 469,
+      "digest": "0xf3219d2951bbad2adc5d916be17602d7d2b66747a31e41db05856dead04ecc00"
+    },
+    {
+      "seed": 121,
+      "length": 606,
+      "digest": "0x956b8998eeda33f13e5d688eb396a9b591d9d082b6d05a808f73650e75cce140"
+    },
+    {
+      "seed": 122,
+      "length": 743,
+      "digest": "0xe4c4c737a5793b324b8dbb5802b1e46d50c9584b16c0b5787348c38a838bfb15"
+    },
+    {
+      "seed": 123,
+      "length": 880,
+      "digest": "0x37bca8e9a0ecce18d8eacdd40a275f61603b36da5759d52a25b3948814af93a9"
+    },
+    {
+      "seed": 124,
+      "length": 1017,
+      "digest": "0x1b266bdee320f8db86d6d96fbb12436ea89c864291a3a21923818b728912eaf1"
+    },
+    {
+      "seed": 125,
+      "length": 1154,
+      "digest": "0x0b2353fcfc1d80bf20f5748f78f072f6ba465d53d817f42f8bd319bc2b477e6f"
+    },
+    {
+      "seed": 126,
+      "length": 1291,
+      "digest": "0x65e85b60dc5e5d5e6c41c5b1ef4b9d23dc02b117bf5b346d798512bc8d7909c4"
+    },
+    {
+      "seed": 127,
+      "length": 1428,
+      "digest": "0x6ed5523925ff2f1c977912ca6c3823c0d9971dfcfd8313ec3e4d8a910d5bc0b3"
+    },
+    {
+      "seed": 128,
+      "length": 1565,
+      "digest": "0x63e94588a7c6409b9696688e0f14c7aacd5a205c8ff1a957702b9a58a2eff58e"
+    },
+    {
+      "seed": 129,
+      "length": 1702,
+      "digest": "0xb4c8ed3dd1f80f435c83116d1e4105ba557272b8d25582ea6d2217041d982191"
+    },
+    {
+      "seed": 130,
+      "length": 1839,
+      "digest": "0xaa756751e7b11d96b61c54a58dd9c5d31d9e118a98e8c1d9eddf5bb0de58f6a2"
+    },
+    {
+      "seed": 131,
+      "length": 1976,
+      "digest": "0x5a0a9a11c997d6d671db1a84fea43dcaa423255a13a8dd0aa316beb9405ecca4"
+    },
+    {
+      "seed": 132,
+      "length": 2113,
+      "digest": "0x0ee9b82371b4e3b8cccc97154fb8bac6f7202b5f6a61f283bc195b5c94edaf5b"
+    },
+    {
+      "seed": 133,
+      "length": 2250,
+      "digest": "0x7b60747e10842094fc70d7562b407590acecfef1da23ec0a03f5b0c21ea5eb83"
+    },
+    {
+      "seed": 134,
+      "length": 87,
+      "digest": "0x0eae26eec5524afeca0e2de90f187602e8deb8acb04d09582f5795d4541b63c9"
+    },
+    {
+      "seed": 135,
+      "length": 224,
+      "digest": "0x430401a3628bd65b3575e726b5aa4108253daa1fcbb889212236248b92ae65a5"
+    },
+    {
+      "seed": 136,
+      "length": 361,
+      "digest": "0x4f848dd00892bc1a030c1510f4d7719863a31c126b0c2977115f613e5d07ef0f"
+    },
+    {
+      "seed": 137,
+      "length": 498,
+      "digest": "0x981118a16daee1b63c681bd0865f8e02cbf5b781a1abc48a8d906ac88f4b54f9"
+    },
+    {
+      "seed": 138,
+      "length": 635,
+      "digest": "0xc12de6c27daa68603a3573878887f793df64fa6d1e23467b26c6e1ea0ffa67ce"
+    },
+    {
+      "seed": 139,
+      "length": 772,
+      "digest": "0x2eae86828dbc5ac9d9a3ff806a0b898dedc37e002f44540623aa18c81e259643"
+    },
+    {
+      "seed": 140,
+      "length": 909,
+      "digest": "0x1037f6ea8395feabf1012d69a1e44da15ba9add876d7fd4cf702b88e75838cad"
+    },
+    {
+      "seed": 141,
+      "length": 1046,
+      "digest": "0x92f99bece40c0539027cae5e09f8fd3731a3a7dc4b989c81b220ccfa14e23ab1"
+    },
+    {
+      "seed": 142,
+      "length": 1183,
+      "digest": "0x9c0f9cc9cfb900f93714af16942e59695f14ee9c8c71afae501997ad52475708"
+    },
+    {
+      "seed": 143,
+      "length": 1320,
+      "digest": "0x7bf646cfd1df5392278cf4c50c29b0c3f7e7f8852b5b89ca96c68a55135b96eb"
+    },
+    {
+      "seed": 144,
+      "length": 1457,
+      "digest": "0x12e7180dbedd0f3183f873ca7295fb44902fc7aa6107a1797a8e7b5b7daeb439"
+    },
+    {
+      "seed": 145,
+      "length": 1594,
+      "digest": "0x98838dca64c3225d9a8da141e0ad13d8feaaa231e6da00547f865fb2d68cebe1"
+    },
+    {
+      "seed": 146,
+      "length": 1731,
+      "digest": "0xbc151d12052276d5c9c1e32fa1cca191fb4c00047cd4efb600e0c4decfa5fc16"
+    },
+    {
+      "seed": 147,
+      "length": 1868,
+      "digest": "0x4af6ac93e97d2463dc1a1f9173e23f5da63469aae4f11f7a6fe586eae76b9a76"
+    },
+    {
+      "seed": 148,
+      "length": 2005,
+      "digest": "0xdaa9564d8ee757f8c05b307d3d931bbfa2327095498553c0cf62daebd01e03ab"
+    },
+    {
+      "seed": 149,
+      "length": 2142,
+      "digest": "0xbef0197eeb452903bd2252aaa9c3e7dfc6da764f06d49be069414d7e817f9de5"
+    }
+  ]
+}

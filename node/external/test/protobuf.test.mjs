@@ -1,0 +1,12 @@
+import test from'node:test';import assert from'node:assert/strict';
+import {decodeMarket,decodeBook,fields,one,str,vint,join,frame,unary,marketRequest,bookRequest,varint}from'../protobuf.mjs';import {marketBytes,bookBytes,grpc,NOW}from'./fixtures.mjs';import {DEMO_MARKET}from'../demo.mjs';
+test('official Market and OrderbookV2 protobuf fields decoded losslessly',()=>{assert.equal(decodeMarket(marketBytes()).baseTokenMeta.decimals,'18');assert.equal(decodeBook(bookBytes()).timestamp,String(NOW));assert.equal(decodeBook(bookBytes()).sequence,'9007199254740993');});
+test('request depth uses sint32 zigzag rather than plain integer',()=>{const f=fields(bookRequest(DEMO_MARKET,50).slice(5));assert.equal(one(f,2,0),100n);assert.equal(marketRequest(DEMO_MARKET)[0],0);});
+test('gRPC success requires final status zero and exactly one response',()=>assert.deepEqual(unary(grpc(marketBytes())),marketBytes()));
+test('gRPC missing/nonzero status, duplicate data and data after trailers rejected',()=>{for(const b of [frame(marketBytes()),grpc(marketBytes(),'7'),join(frame(marketBytes()),grpc(marketBytes())),join(grpc(marketBytes()),frame(new Uint8Array()))])assert.throws(()=>unary(b));});
+test('gRPC header/trailer disagreement is never success',()=>assert.throws(()=>unary(grpc(marketBytes()),'13'),/STATUS/));
+test('gRPC compression and duplicate trailer headers fail closed',()=>{assert.throws(()=>unary(frame(marketBytes(),1)),/COMPRESSION/);assert.throws(()=>unary(join(frame(marketBytes()),frame(new TextEncoder().encode('grpc-status: 0\r\ngrpc-status: 0'),128))),/TRAILERS/);});
+test('all truncation boundaries in a framed response are rejected',()=>{const b=grpc(marketBytes());for(let n=0;n<b.length;n++)assert.throws(()=>unary(b.slice(0,n)));});
+test('protobuf canonical uint64 maximum preserved; overflows and nonminimal forms rejected',()=>{assert.equal(one(fields(vint(1,(1n<<64n)-1n)),1,0),(1n<<64n)-1n);for(const bytes of [[8,128,0],[8,...Array(9).fill(255),2],[0],[8,128]])assert.throws(()=>fields(Uint8Array.from(bytes)));});
+test('protobuf repeated singular fields and wrong wire types rejected',()=>{assert.throws(()=>one(fields(join(str(1,'a'),str(1,'b'))),1,2),/DUPLICATE/);assert.throws(()=>one(fields(str(1,'a')),1,0),/WIRE/);});
+test('protobuf groups, invalid UTF8 and non-bounded payloads rejected',()=>{assert.throws(()=>fields(Uint8Array.of(11)),/WIRE/);assert.throws(()=>decodeMarket(Uint8Array.of(10,3,10,1,255)),/UTF8/);assert.throws(()=>fields(new Uint8Array(2097153)),/SIZE/);});

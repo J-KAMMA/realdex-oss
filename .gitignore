@@ -1,0 +1,47 @@
+node_modules/
+dist/
+artifacts/
+cache/
+coverage/
+typechain-types/
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# Signing material never belongs in this tree, and must not sit in a cloud-synced
+# folder either. These patterns are a net, not a location.
+*.key
+*.pem
+*key.json
+*keystore*.json
+signer-*.json
+.realdex/
+
+# Optional custom local wallet directory; default is outside the repository.
+.realdex-wallet/
+
+# Local private state and generated evidence are never source commits.
+.realdex-app/
+.realdex-relay/
+.realdex-worktrees/
+.worktrees/
+.tools/
+tools/
+acceptance-*/
+ci-output/
+**/evidence/
+**/logs/
+FILES.sha256
+CHECKPOINT-MANIFEST.json
+PACKAGE-MANIFEST-*.json
+*.bundle
+*.zip
+*.enc
+.cookie
+*.sqlite
+*.sqlite3
+*.db
+__pycache__/
+*.pyc

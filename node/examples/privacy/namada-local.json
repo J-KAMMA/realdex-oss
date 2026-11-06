@@ -1,0 +1,14 @@
+{
+  "schema": "realdex.extended-probe-request.v1",
+  "networkId": "namada:mainnet",
+  "endpoints": [
+    "http://127.0.0.1:26657"
+  ],
+  "identityAnchor": {
+    "height": "1",
+    "hash": "REPLACE_WITH_INDEPENDENTLY_VERIFIED_CHECKPOINT_HASH"
+  },
+  "access": {
+    "mode": "local-only"
+  }
+}

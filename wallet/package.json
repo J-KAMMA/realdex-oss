@@ -1,0 +1,15 @@
+{
+  "name": "realdex-local-wallet-preview",
+  "version": "0.22.0-dev.20260906",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "start": "node cli.mjs start",
+    "test": "node test/run.mjs"
+  },
+  "dependencies": {}
+}

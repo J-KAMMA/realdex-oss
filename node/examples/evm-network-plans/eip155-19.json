@@ -1,0 +1,57 @@
+{
+  "schema": "realdex.evm-network-plan.v1",
+  "network": {
+    "id": "eip155:19",
+    "name": "Songbird",
+    "environment": "mainnet"
+  },
+  "sourceBundleSha256": "b955a672ba10f80e692adb2c4ffa3ec839db35948039ae5283d87bbd71372458",
+  "compiler": {
+    "version": "0.8.24+commit.e11b9ed9",
+    "optimizerRuns": 500,
+    "evmVersion": "paris",
+    "inputSha256": "b955a672ba10f80e692adb2c4ffa3ec839db35948039ae5283d87bbd71372458"
+  },
+  "status": "planning-only",
+  "toolchain": "solidity-compatibility-unverified",
+  "compilerInputPath": "compiler-input.json",
+  "stages": [
+    {
+      "operation": "deploy-factory",
+      "contract": "LocalSwapFactory",
+      "constructorArguments": []
+    },
+    {
+      "operation": "deploy-router",
+      "contract": "LocalSwapRouter",
+      "constructorArguments": []
+    },
+    {
+      "operation": "create-pool-after-independent-review",
+      "contract": "LocalSwapFactory",
+      "method": "createPool(address,address,uint256)",
+      "arguments": null
+    }
+  ],
+  "addresses": {
+    "factory": null,
+    "router": null
+  },
+  "runtimeCodeHashes": null,
+  "required": [
+    "compile with the exact compiler and compare independent outputs",
+    "review network EVM opcodes, deployment size limits and gas model",
+    "verify Factory storage/provenance, Pool constructor arguments and immutable runtime",
+    "obtain separate authorization for the exact network, artifacts and expenditure",
+    "two-reader deployment receipt/runtime checks",
+    "token behavior, swap, revert and recovery tests"
+  ],
+  "warnings": [
+    "Paris output has different identities from the previous default compiler target; never reuse old runtime hashes."
+  ],
+  "compiled": false,
+  "deployed": false,
+  "poolsCreated": false,
+  "authorized": false,
+  "executable": false
+}

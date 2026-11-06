@@ -1,0 +1,26 @@
+{
+  "schema": "realdex.evm-networks.v1",
+  "note": "Chain facts and well-known public RPC endpoints only. No contract address, deployer or operator endpoint is listed here: contracts are deployed and configured by each user.",
+  "networks": {
+    "eip155:84532": {
+      "name": "Base Sepolia", "chainId": "84532", "environment": "public-testnet", "nativeSymbol": "ETH", "counterpart": "eip155:8453",
+      "rpcUrls": ["https://sepolia.base.org", "https://base-sepolia-rpc.publicnode.com"],
+      "explorerAddressUrl": "https://sepolia.basescan.org/address/"
+    },
+    "eip155:8453": {
+      "name": "Base", "chainId": "8453", "environment": "mainnet", "nativeSymbol": "ETH", "counterpart": "eip155:84532",
+      "rpcUrls": ["https://mainnet.base.org", "https://base-rpc.publicnode.com"],
+      "explorerAddressUrl": "https://basescan.org/address/"
+    },
+    "eip155:421614": {
+      "name": "Arbitrum Sepolia", "chainId": "421614", "environment": "public-testnet", "nativeSymbol": "ETH", "counterpart": "eip155:42161",
+      "rpcUrls": ["https://sepolia-rollup.arbitrum.io/rpc", "https://arbitrum-sepolia-rpc.publicnode.com"],
+      "explorerAddressUrl": "https://sepolia.arbiscan.io/address/"
+    },
+    "eip155:42161": {
+      "name": "Arbitrum One", "chainId": "42161", "environment": "mainnet", "nativeSymbol": "ETH", "counterpart": "eip155:421614",
+      "rpcUrls": ["https://arb1.arbitrum.io/rpc", "https://arbitrum-one-rpc.publicnode.com"],
+      "explorerAddressUrl": "https://arbiscan.io/address/"
+    }
+  }
+}

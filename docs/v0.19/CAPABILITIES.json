@@ -1,0 +1,45 @@
+{
+  "schema": "realdex.smart-account-capabilities.v1",
+  "release": "0.19.0-dev.20260906",
+  "ownerModel": "immutable-single-local-EVM-EOA",
+  "implementation": {
+    "create2Factory": true,
+    "separateAssetHoldingAddress": true,
+    "nativeAndRegisteredERC20Payments": true,
+    "atomicBatchMaxCalls": 8,
+    "atomicApproveSwapRevoke": true,
+    "maxPoolHops": 4,
+    "erc1271": true,
+    "onchainSessionCaps": [
+      "per-call",
+      "UTC-calendar-day",
+      "per-grant-total"
+    ],
+    "maxSessionSeconds": 604800,
+    "sessionGenerationAndNonce": true,
+    "perKeyAndGlobalRevocation": true,
+    "signatureEpochAndDeadline": true,
+    "backupAndSignedCalldataValidation": true
+  },
+  "notImplemented": [
+    "ERC-4337",
+    "UserOperation",
+    "EntryPoint",
+    "bundler",
+    "paymaster",
+    "EIP-7702",
+    "passkeys",
+    "multisig",
+    "guardian-recovery",
+    "owner-rotation",
+    "ERC-6492",
+    "AI-MCP-session-signing",
+    "non-EVM-smart-accounts"
+  ],
+  "gasPayer": "owner-or-session-EOA; no-paymaster",
+  "localLockRevokesOnchainPermissions": false,
+  "experimentalCompiler": true,
+  "stableCompilerGatePassed": false,
+  "independentAuditCompleted": false,
+  "productionReady": false
+}

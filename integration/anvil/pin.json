@@ -1,0 +1,12 @@
+{
+  "platform": "linux", "arch": "x64", "version": "1.8.1-nightly",
+  "commit": "239283e6e86545c1517cac411730d316352160a6",
+  "sha256": "2c403563da1605bfda3e6892895209269f6959033af818b54ccd2f15b92df858",
+  "bytes": 50363200,
+  "provenance": "foundry-rs/foundry GitHub Actions run 33842672784, artifact 9926085124",
+  "archiveSha256": "de004f8769bec792572a2c413dc18b8a55f4b1331218b714d43dad9b3bf2d7eb",
+  "tarSha256": "eecc6aa5309d0fd8e0e859228c22dc3917398cb157d14b46b5cf9516118fb42a",
+  "releaseUrl": "https://github.com/foundry-rs/foundry/releases/download/nightly-239283e6e86545c1517cac411730d316352160a6/foundry_nightly_linux_amd64.tar.gz",
+  "hardfork": "shanghai", "chainId": "31337",
+  "forTestingOnly": true
+}

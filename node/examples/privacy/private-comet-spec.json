@@ -1,0 +1,6 @@
+{
+  "slug": "my-lab",
+  "chainId": "my-private-chain-1",
+  "checkpointHash": "REPLACE_WITH_INDEPENDENTLY_VERIFIED_CHECKPOINT_HASH",
+  "name": "My private CometBFT network"
+}

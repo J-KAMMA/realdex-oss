@@ -1,0 +1,34 @@
+{
+  "servedRelease": "base-sepolia-c052e1d9f8a4",
+  "scope": "built configured app against the real Base Sepolia deployment with a synthetic keyless EIP-6963 wallet; no extension, no signing, no send",
+  "cases": [
+    {
+      "change": "chain",
+      "walletMethods": [
+        "eth_chainId",
+        "eth_requestAccounts",
+        "eth_accounts"
+      ],
+      "forbiddenMethodsReached": 0,
+      "executionDisabledAfterChange": true,
+      "quotingDisabledAfterChange": true,
+      "pageErrors": 0,
+      "disallowedOrigins": 0
+    },
+    {
+      "change": "account",
+      "walletMethods": [
+        "eth_chainId",
+        "eth_requestAccounts",
+        "eth_accounts"
+      ],
+      "forbiddenMethodsReached": 0,
+      "executionDisabledAfterChange": true,
+      "quotingDisabledAfterChange": true,
+      "pageErrors": 0,
+      "disallowedOrigins": 0
+    }
+  ],
+  "browser": "143.0.7499.4",
+  "ranAt": "2026-09-09T16:02:47.394Z"
+}

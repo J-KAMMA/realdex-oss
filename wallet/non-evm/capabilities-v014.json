@@ -1,0 +1,66 @@
+{
+  "schema": "realdex.capabilities.v014",
+  "version": "0.14.0-dev.20260905",
+  "productionReady": false,
+  "publicDeployments": false,
+  "top100CoverageComplete": false,
+  "newPaths": [
+    {
+      "family": "solana",
+      "asset": "classic SPL",
+      "ownerSignature": true,
+      "localSubmit": true,
+      "runtime": "LiteSVM Token Program; synthetic RPC metadata",
+      "publicNetworkTested": false,
+      "extensionsSupported": false,
+      "ataCreation": false
+    },
+    {
+      "family": "bitcoin",
+      "ownerSignature": true,
+      "offlineExport": true,
+      "localSubmit": false,
+      "publicNetworkTested": false,
+      "chainRuntimeTested": false,
+      "independentFormatAndSignatureChecks": 12,
+      "stateInputs": "manually supplied, not certified"
+    },
+    {
+      "family": "cosmos",
+      "ownerSignature": true,
+      "offlineExport": true,
+      "localSubmit": false,
+      "publicNetworkTested": false,
+      "chainRuntimeTested": false,
+      "independentFormatAndSignatureChecks": 12,
+      "stateInputs": "manually supplied, not certified"
+    },
+    {
+      "family": "stellar",
+      "ownerSignature": true,
+      "offlineExport": true,
+      "localSubmit": false,
+      "publicNetworkTested": false,
+      "chainRuntimeTested": false,
+      "independentFormatAndSignatureChecks": 12,
+      "stateInputs": "manually supplied, not certified"
+    },
+    {
+      "family": "aptos",
+      "ownerSignature": true,
+      "offlineExport": true,
+      "localSubmit": false,
+      "publicNetworkTested": false,
+      "chainRuntimeTested": false,
+      "independentFormatAndSignatureChecks": 12,
+      "stateInputs": "manually supplied, not certified"
+    }
+  ],
+  "unchangedLimits": [
+    "no non-EVM agent authority",
+    "no non-EVM bridge/swaps",
+    "ICP offline only",
+    "nonEvmJournal maximum 128",
+    "no safe rollback/cross-device reservation protocol"
+  ]
+}

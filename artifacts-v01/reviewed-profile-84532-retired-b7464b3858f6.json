@@ -1,0 +1,55 @@
+{
+  "profile": {
+    "schema": "realdex.v01-profile.v1",
+    "deployment": {
+      "schema": "realdex.evm-public-testnet-deployment.v1",
+      "releaseId": "base-sepolia-b7464b3858f6",
+      "environment": "public-testnet",
+      "network": {
+        "caip2": "eip155:84532",
+        "name": "Base Sepolia"
+      },
+      "source": {
+        "bundleSha256": "sha256:b7464b3858f6d5477d08e5908bb24a851256c6606379d94eea7423ac3ec0fcf2",
+        "solidity": "0.8.24",
+        "optimizerRuns": 500,
+        "factoryRuntimeCodeHash": "0x48db26a848833604e24e1efc3c8b8927c360d3fff85239713cec29f0053627d4",
+        "routerRuntimeCodeHash": "0x08da00c257c88a2eb455fa40ae442d051b40c267e9db9ae89caaf3029efea060"
+      },
+      "deployer": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+      "contracts": {
+        "factory": {
+          "address": "0xb6228A7454D8a3CDcAA5E13F65d5aCc27863903f",
+          "deploymentTxHash": "0x68b4a249245bf435265e47c840f049965c12d4f87aecad3e0c6edcf5f3d43507",
+          "blockNumber": 46335226,
+          "runtimeCodeHash": "0x48db26a848833604e24e1efc3c8b8927c360d3fff85239713cec29f0053627d4"
+        },
+        "router": {
+          "address": "0x2c350D695F3f6C8207f94f4957Be95B05765b3d6",
+          "deploymentTxHash": "0xada73139fda67abf39eef492927c736242577086aa78639973eefbd3c7c85adc",
+          "blockNumber": 46335227,
+          "runtimeCodeHash": "0x08da00c257c88a2eb455fa40ae442d051b40c267e9db9ae89caaf3029efea060"
+        }
+      },
+      "createdAt": 1788439583069,
+      "evidenceUrls": [
+        "https://sepolia.basescan.org/address/0xb6228A7454D8a3CDcAA5E13F65d5aCc27863903f",
+        "https://sepolia.basescan.org/address/0x2c350D695F3f6C8207f94f4957Be95B05765b3d6",
+        "https://sepolia.basescan.org/address/0xb389b20384dc8071B542D946537D333684A47F4D"
+      ]
+    },
+    "pool": {
+      "address": "0xb389b20384dc8071B542D946537D333684A47F4D",
+      "runtimeCodeHash": "0xe275e3930fd079b223376dab16b1d1fedef86d7a8c68bba9c6160c6bf5f11bbd"
+    },
+    "tokens": {
+      "ambr": "0x3c4E0537Ac2B41A05e8ee21eA8948AC9b9CCfE62",
+      "jade": "0xb94222ECa3809DC5ecD01A2Fb035952C8EeeA9F8"
+    }
+  },
+  "pin": {
+    "releaseId": "base-sepolia-b7464b3858f6",
+    "bundleSha256": "sha256:b7464b3858f6d5477d08e5908bb24a851256c6606379d94eea7423ac3ec0fcf2",
+    "profileFingerprint": "0x6c9cd5fbdc7374ffba50723f0f8e6f5877530e9871e3335385772cf636816b4f"
+  }
+}

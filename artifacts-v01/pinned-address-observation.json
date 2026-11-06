@@ -1,0 +1,83 @@
+{
+  "schema": "realdex.pinned-address-observation.v1",
+  "observedAt": "2026-09-04T20:22:50.326Z",
+  "chains": [
+    {
+      "name": "Base Sepolia",
+      "chainId": "84532",
+      "addresses": {
+        "CCTP MessageTransmitterV2": "0xe737e5cebeeba77efe34d4aa090756590b1ce275",
+        "CCTP TokenMessengerV2": "0x8fe6b999dc680ccfdd5bf7eb0974218be2542daa",
+        "USDC": "0x036cbd53842c5426634e7929541ec2318f3dcf7e",
+        "LocalSwapFactory": "0x1b2B307F1AaE38f029290eD5AD7CC459069851B2",
+        "LocalSwapRouter": "0xC92876dda012CAe459477D0e2b3e6898F76b5833",
+        "AMBR/JADE pool (1bp)": "0xf1c3cCbdC5C4550778374cF0ae88B564942f327E",
+        "AMBR": "0xa7aD1A578C2758D761F8DB4D1C8220b3fCcf4996",
+        "JADE": "0x973aDa85eA6Eb4C9C2406e80a7E86c6b8F6cc31a"
+      },
+      "readers": [
+        {
+          "url": "https://sepolia.base.org/",
+          "chainId": "84532",
+          "chainIdMatches": true,
+          "runtimeCodeBytes": {
+            "CCTP MessageTransmitterV2": 2175,
+            "CCTP TokenMessengerV2": 2175,
+            "USDC": 1798,
+            "LocalSwapFactory": 9113,
+            "LocalSwapRouter": 6542,
+            "AMBR/JADE pool (1bp)": 7505,
+            "AMBR": 1733,
+            "JADE": 1733
+          }
+        },
+        {
+          "url": "https://base-sepolia-rpc.publicnode.com/",
+          "chainId": "84532",
+          "chainIdMatches": true,
+          "runtimeCodeBytes": {
+            "CCTP MessageTransmitterV2": 2175,
+            "CCTP TokenMessengerV2": 2175,
+            "USDC": 1798,
+            "LocalSwapFactory": 9113,
+            "LocalSwapRouter": 6542,
+            "AMBR/JADE pool (1bp)": 7505,
+            "AMBR": 1733,
+            "JADE": 1733
+          }
+        }
+      ]
+    },
+    {
+      "name": "Arbitrum Sepolia",
+      "chainId": "421614",
+      "addresses": {
+        "CCTP MessageTransmitterV2": "0xe737e5cebeeba77efe34d4aa090756590b1ce275",
+        "CCTP TokenMessengerV2": "0x8fe6b999dc680ccfdd5bf7eb0974218be2542daa",
+        "USDC": "0x75faf114eafb1bdbe2f0316df893fd58ce46aa4d"
+      },
+      "readers": [
+        {
+          "url": "https://sepolia-rollup.arbitrum.io/rpc",
+          "chainId": "421614",
+          "chainIdMatches": true,
+          "runtimeCodeBytes": {
+            "CCTP MessageTransmitterV2": 2175,
+            "CCTP TokenMessengerV2": 2175,
+            "USDC": 1798
+          }
+        },
+        {
+          "url": "https://arbitrum-sepolia-rpc.publicnode.com/",
+          "chainId": "421614",
+          "chainIdMatches": true,
+          "runtimeCodeBytes": {
+            "CCTP MessageTransmitterV2": 2175,
+            "CCTP TokenMessengerV2": 2175,
+            "USDC": 1798
+          }
+        }
+      ]
+    }
+  ]
+}

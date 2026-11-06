@@ -1,0 +1,17 @@
+{
+  "schema": "realdex.ibc-diagnostic-tool.v1",
+  "platform": "linux", "arch": "x64", "diagnosticOnly": true,
+  "repository": "cosmos/ibc-go", "sourceRepository": "lapidix/ibc-go",
+  "workflowRun": 33915570402, "artifactId": 9953158387,
+  "headCommit": "efeeb9f6c70217758ac0f98129ae961419bb79b3",
+  "branch": "fix/8653-reject-unreachable-timeout-revision", "pullRequest": 9033,
+  "archiveBytes": 46064515,
+  "archiveSha256": "d45595be988a40ee6c32489d1db12a621cc2e00144d27e6bf7f61daebfab55e0",
+  "binaryBytes": 137118112,
+  "binarySha256": "a2670ead414260162947575f272d0a98e0cb16fd8cd1de171e5dcfaa5110627b",
+  "loaderBytes": 662120,
+  "loaderSha256": "2fb72c67f292827c8c4095067197af7880c234a3a4060136e1b5518d10de1eb9",
+  "reportedSdkVersion": "v0.55.0",
+  "sourceRebuildVerified": false,
+  "scope": "PR CI diagnostic image; two isolated single-validator local chains; not an approved production binary"
+}

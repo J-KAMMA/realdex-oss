@@ -1,0 +1,365 @@
+{
+  "description": "Independent Python stdlib zlib.crc32 + base64.b32encode, seed 605, lengths 0..29.",
+  "vectors": [
+    {
+      "hex": "",
+      "text": "aaaaa-aa"
+    },
+    {
+      "hex": "",
+      "text": "aaaaa-aa"
+    },
+    {
+      "hex": "",
+      "text": "aaaaa-aa"
+    },
+    {
+      "hex": "58",
+      "text": "w6zdm-s2y"
+    },
+    {
+      "hex": "de",
+      "text": "wnura-xw6"
+    },
+    {
+      "hex": "fd",
+      "text": "cehgc-lh5"
+    },
+    {
+      "hex": "331e",
+      "text": "j66uv-lbtdy"
+    },
+    {
+      "hex": "b97a",
+      "text": "yqhj6-lfzpi"
+    },
+    {
+      "hex": "f04d",
+      "text": "luem4-37qju"
+    },
+    {
+      "hex": "df261d",
+      "text": "3fgej-yw7ey-oq"
+    },
+    {
+      "hex": "f4231b",
+      "text": "pfalz-e7uem-nq"
+    },
+    {
+      "hex": "e3f35c",
+      "text": "bgurq-sxd6n-oa"
+    },
+    {
+      "hex": "a1d3f99c",
+      "text": "m6n27-dvb2p-4zy"
+    },
+    {
+      "hex": "684b421b",
+      "text": "5mzyn-otijn-bbw"
+    },
+    {
+      "hex": "88d07160",
+      "text": "763f2-f4i2b-ywa"
+    },
+    {
+      "hex": "0f63f76d51",
+      "text": "cfkst-7apmp-3w2ui"
+    },
+    {
+      "hex": "81d11d47a8",
+      "text": "u6dxf-6eb2e-oupka"
+    },
+    {
+      "hex": "6457e2efcf",
+      "text": "qqisk-r3ek7-ro7ty"
+    },
+    {
+      "hex": "746562fb0b34",
+      "text": "tjozr-dtumv-rpwcz-u"
+    },
+    {
+      "hex": "959abac88b87",
+      "text": "eedsp-z4vtk-5mrc4-h"
+    },
+    {
+      "hex": "1e2799b9d114",
+      "text": "opaxv-tq6e6-m3tui-u"
+    },
+    {
+      "hex": "7624c190e1012d",
+      "text": "cm4iu-i3wet-azbyi-bfu"
+    },
+    {
+      "hex": "eda3ae94c26602",
+      "text": "2ismh-txnuo-xjjqt-gai"
+    },
+    {
+      "hex": "24990251ddbb41",
+      "text": "cy6r5-szete-bfdxn-3ie"
+    },
+    {
+      "hex": "ccccd090b97f3060",
+      "text": "fwgtu-b6mzt-ijbol-7gbqa"
+    },
+    {
+      "hex": "6f223acb9868ff56",
+      "text": "edz6f-ktpei-5mxgd-i75la"
+    },
+    {
+      "hex": "69e2149aaeec019a",
+      "text": "hhc2a-etj4i-kjvlx-magna"
+    },
+    {
+      "hex": "56b81f1cb9bd05ed5b",
+      "text": "4s67j-e2wxa-przon-5axwv-w"
+    },
+    {
+      "hex": "2ebc44affab26304c8",
+      "text": "ppieq-nboxr-ck76v-smmcm-q"
+    },
+    {
+      "hex": "99fb50432e2e2dea69",
+      "text": "czisp-y4z7n-ieglr-ofxvg-s"
+    },
+    {
+      "hex": "d60124fcac90a482d5ee",
+      "text": "lsa7m-jwwae-spzle-qusbn-l3q"
+    },
+    {
+      "hex": "0b0e642b466442b37955",
+      "text": "5t4qj-4ylbz-scwrt-eikzx-svi"
+    },
+    {
+      "hex": "d7db69854a9ed8965c37",
+      "text": "vgtq6-76x3n-uyksu-63clf-yny"
+    },
+    {
+      "hex": "b1d54febfe0d1476fbc320",
+      "text": "uluak-35r2v-h6x7q-ncr3p-xqza"
+    },
+    {
+      "hex": "19304ba864ada3b6645efc",
+      "text": "7gujx-lqzgb-f2qzf-nuo3g-ixx4"
+    },
+    {
+      "hex": "73688ee452ce97bc6baefc",
+      "text": "bro3o-nltnc-hoiuw-os66g-xlx4"
+    },
+    {
+      "hex": "bcac1ce5af3e3d23958929b7",
+      "text": "ptul3-ev4vq-oollz-6hurz-lcjjw-4"
+    },
+    {
+      "hex": "a8821f228730b7eb9e323a4b",
+      "text": "i6a6k-dniqi-psfbz-qw7vz-4mr2j-m"
+    },
+    {
+      "hex": "9987a31497f5d2a1f1cb29d8",
+      "text": "bhtjf-k4zq6-rrjf7-v2kq7-dszj3-a"
+    },
+    {
+      "hex": "efa78ba79e8803f19bbc6d8854",
+      "text": "2y4x2-bxpu6-f2phu-iapyz-xpdnr-bka"
+    },
+    {
+      "hex": "b5c8fa0f5f70aacda1e837a693",
+      "text": "3brjy-kvvzd-5a6x3-qvlg2-d2bxu-2jq"
+    },
+    {
+      "hex": "ccca335b8982a7a0922c15132a",
+      "text": "mosw5-awmzi-zvxcm-cu6qj-elavc-mva"
+    },
+    {
+      "hex": "497ff6789bb912fa61464d79463e",
+      "text": "f2ncd-hkjp7-3hrg5-zcl5g-crsnp-fdd4"
+    },
+    {
+      "hex": "22af93a40cecb9294e4cfd87cf04",
+      "text": "ww5nm-qrcv6-j2idh-mxeuu-4th5q-7hqi"
+    },
+    {
+      "hex": "dcbfaddc5f91d482a2e1a0d1e911",
+      "text": "kevgm-sg4x6-w5yx4-r2sbk-fyna2-hurc"
+    },
+    {
+      "hex": "8d1dc739b5c9db10d9e24c8993fd0f",
+      "text": "xpsf4-xmndx-dttno-j3min-tysmr-gj72d-y"
+    },
+    {
+      "hex": "b75a2165a2a5c7f3b4f92191ead2e3",
+      "text": "t53zr-45xli-qwliv-fy7z3-j6jbs-hvnfy-y"
+    },
+    {
+      "hex": "7545a971bdf0d06240e9d76742c495",
+      "text": "xjxxd-qdviw-uxdpp-q2bre-b2oxm-5bmjf-i"
+    },
+    {
+      "hex": "9cd9f03af0acb1c857136cdfe32d8536",
+      "text": "z2byd-je43h-ydv4f-mwhef-oe3m3-7rs3b-jw"
+    },
+    {
+      "hex": "16f1fbf34901c12275818ed64a01a9e4",
+      "text": "xn2fb-eaw6h-57gsi-byerh-lamo2-zfadk-pe"
+    },
+    {
+      "hex": "aba40269d376f89ee29690af0ff88583",
+      "text": "s3qjb-znluq-bgtu3-w7cpo-ffuqv-4h7rb-md"
+    },
+    {
+      "hex": "cd821b911a431ab963bee15fe66f700edf",
+      "text": "ctjzp-2onqi-nzcgs-ddk4w-hpxbl-7tg64-ao34"
+    },
+    {
+      "hex": "be7f24d1dced0487b4867bc8430a738ef7",
+      "text": "ampsr-of6p4-sndxh-nasd3-jbt3z-bbqu4-4o64"
+    },
+    {
+      "hex": "64ee2ddf278aa4c8b9872f211dac4163f0",
+      "text": "ghxdx-3te5y-w56j4-kutel-tbzpe-eo2yq-ld6a"
+    },
+    {
+      "hex": "f240fa7ce0503b971dbc4fc8b984748f01e4",
+      "text": "iuobl-whsid-5hzyc-qholr-3pcpz-c4yi5-epahs-a"
+    },
+    {
+      "hex": "56da5d67e8ab74fd3d97bb6bc6c5ceac9140",
+      "text": "auc6c-6kw3j-owp2f-lot6t-3f53n-pdmlt-vmsfa-a"
+    },
+    {
+      "hex": "4816312962b232f4647e26edb2dfe2f0e7ae",
+      "text": "xdlbg-t2icy-yssyv-sgl2g-i7rg5-wzn7y-xq46x-a"
+    },
+    {
+      "hex": "3e00119fc24a156125659f970003d126b69096",
+      "text": "sqkwb-ub6aa-iz7qs-kcvqs-kzm7s-4aahu-jgw2i-jm"
+    },
+    {
+      "hex": "349df1705bbfb7d8a2ac44aa4f14b74e363cba",
+      "text": "os7bl-7zutx-yxaw5-7w7mk-flcev-jhrjn-2ogy6-lu"
+    },
+    {
+      "hex": "490a756fbee16e6e2156189550deeb05a73976",
+      "text": "h56wr-k2jbj-2w7px-bnzxc-cvqys-vin52-yfu44-xm"
+    },
+    {
+      "hex": "9855154c4d4c37dd66eaf0c9d3c908a0073a34ea",
+      "text": "65zsx-umyku-kuytk-mg7ow-n2xqz-hj4sc-faa45-dj2q"
+    },
+    {
+      "hex": "a20eb8c73fe2fd81d699c3bfce050de1304cf629",
+      "text": "lv2fg-tvcb2-4mop7-c7wa5-ngodx-7hakd-pbgbg-pmki"
+    },
+    {
+      "hex": "67c7675597a6f6deef3da33ba4ae48f712284ca4",
+      "text": "2pwep-3dhy5-tvlf5-g63po-6pndh-osk4s-hxciu-ezja"
+    },
+    {
+      "hex": "b0d9fe3e475fa9c56260b1fb40d9423c2ff2b65cef",
+      "text": "46jfq-h5q3h-7d4r2-7vhcw-eyfr7-nansq-r4f7z-lmxhp"
+    },
+    {
+      "hex": "865abed14ce797082fd6a348ffe5444f1fdf743ef5",
+      "text": "k2p43-2uglk-7ncth-hs4ec-7vvdj-d76kr-cpd7p-xipxv"
+    },
+    {
+      "hex": "ec6cfaae4409deb27c0c9588fc229bc4483f40a119",
+      "text": "byurl-6pmnt-5k4ra-j32zh-ydevr-d6cfg-6eja7-ubiiz"
+    },
+    {
+      "hex": "60901a693ed054ca7943e0c5089a9cbf6dc97cde80b3",
+      "text": "kxvp7-5tasa-ngspw-qktfh-sq7ay-uejvh-f7nxe-xzxua-wm"
+    },
+    {
+      "hex": "d88c8d85033d8c52ef68c9bebc405d1f47fd6de10411",
+      "text": "jauvj-soyrs-gykaz-5rrjo-62gjx-26eax-i7i76-w3yie-ce"
+    },
+    {
+      "hex": "9187cc2e13c68b88ef5ee40c90d161feaba05f39822c",
+      "text": "x43uv-6mrq7-gc4e6-groeo-6xxeb-sincy-p6voq-f6omc-fq"
+    },
+    {
+      "hex": "b65d25a42551dc547819479a5633ca33e72410bda8931b",
+      "text": "tfv2z-j5wlu-s2ijk-r3rkh-qgkht-jldhs-rt44s-bbpni-smnq"
+    },
+    {
+      "hex": "b90153bb8cc90c13c859bcaf03008b462210c5fbd9efa1",
+      "text": "5nj3y-tvzaf-j3xdg-jbqj4-qwn4v-4bqbc-2geii-ml66z-56qq"
+    },
+    {
+      "hex": "495855f447e67304aebfde5c4076b16311c9ce1e9ee960",
+      "text": "pjvje-ocjlb-k7ir7-gomck-5p66l-rahnm-ldche-44hu6-5fqa"
+    },
+    {
+      "hex": "8da34d455dded1a858a5dc6a9261ea8887bd76449681d343",
+      "text": "gpykn-aenun-gukxo-62guf-rjo4n-kjgd2-uiq66-xmrew-qhjug"
+    },
+    {
+      "hex": "2c429627a0d5b5c56b2765f2f36b23cc3b5e9c0dc3276954",
+      "text": "yvxxs-lrmik-lcpig-vwxcw-wj3f6-lzwwi-6mhnp-jydod-e5uvi"
+    },
+    {
+      "hex": "459a37d0b0b7c3a2b5febfff7e6bfe3c519e2f13edec65c9",
+      "text": "jf5kk-y2fti-35bmf-xyorl-l7v77-57gx7-r4kgp-c6e7n-5rs4s"
+    },
+    {
+      "hex": "4a80b298c9eeafa99e86c309ea35d0baad54a69057fab1818d",
+      "text": "ohjrr-62kqc-zjrsp-ov6uz-5bwdb-hvdlu-f2vvk-knecx-7kyyd-di"
+    },
+    {
+      "hex": "7f0cfc10c9b41ff02f32f9dd8bcf99f5a6fe6d2b9e100c4c04",
+      "text": "y4gwn-wd7bt-6bbsn-ud7yc-6mxz3-wf47g-pvu37-g2k46-cagey-ba"
+    },
+    {
+      "hex": "bd09159c26885b339d738e469218332379cbc5b6db3a1f2730",
+      "text": "ovdte-gn5be-kzyju-ilmzz-244oi-2jbqm-zdphf-4lnw3-hipso-ma"
+    },
+    {
+      "hex": "c1096ba17a1ffe43827493574d7962610f08003a6e6e8cb5f1f1",
+      "text": "5kdwh-hwbbf-v2c6q-77zby-e5etk-5gxsy-tbb4e-aaoto-n2gll-4pr"
+    },
+    {
+      "hex": "b07a47fea5342bfb6191c5eff6c9ea80e55b0c6476439bdccbc8",
+      "text": "2yln6-qfqpj-d75jj-ufp5w-deof5-73mt2-ua4vn-qyzdw-ion5z-s6i"
+    },
+    {
+      "hex": "97997d97528312503a4cfe1366c1f233a85d657f502f7bdc40ba",
+      "text": "q66u6-u4xtf-6zouu-dcjid-uth6c-ntmd4-rtvbo-wk72q-f555y-qf2"
+    },
+    {
+      "hex": "a838b40b2c76a483baab719234c9c82a20000b9abe18d2ea3ea1c7",
+      "text": "hckiq-jvihc-2awld-wusb3-vk3rs-i2mts-bkeaa-axgv6-ddjou-pvby4"
+    },
+    {
+      "hex": "a8ea89294ee587016402afbd3e7530d0779b1b68f2788910686dd1",
+      "text": "qp7r5-svi5k-esstx-fq4aw-iavpx-u7hkm-gqo6n-rw2hs-pcera-2dn2e"
+    },
+    {
+      "hex": "e95b1b48beaba3a0e0d662f6159308721363ab9e5b272b1e922639",
+      "text": "q4ifr-3pjlm-nurpv-luoqo-bvtc6-ykzgc-dscnr-2xhs3-e4vr5-erghe"
+    },
+    {
+      "hex": "637af51e7cf82a142d6054a94789b618fedf4b3fe398e6f4f18c343e",
+      "text": "nypfg-f3dpl-2r47h-yfikc-2ycuv-fdytn-qy73p-uwp7d-tdtpj-4mmgq-7a"
+    },
+    {
+      "hex": "7f7fec441f3e7953267ccc155da5bbd1b26b78aa3d52d0b93583829b",
+      "text": "c274q-bt7p7-weihz-6pfjs-m7gmc-vo2lo-6rwjv-xrkr5-klils-nmdqk-nq"
+    },
+    {
+      "hex": "35fb456e7b55416703b8cfe9b28d5e7d956c642c92c8c03e56f44067",
+      "text": "d7wrg-kjv7n-cw462-viftq-hogp5-gzi2x-t5svw-giles-zdad4-vxuib-tq"
+    },
+    {
+      "hex": "3484f2bc0b9f2aca981105118843da757150d5587742279fd59bb8a6c0",
+      "text": "j6sqo-lbuqt-zlyc4-7flfj-qeifc-geehw-tvofi-nkwdx-iitz7-vm3xc-tma"
+    },
+    {
+      "hex": "3a64a7bd5380ed10224c73a0062ad7abae627379b8746ad128f681936c",
+      "text": "wy6vk-tz2ms-t32u4-a5uic-etdtu-adcvv-5lvzr-hg6ny-orvnc-khwqg-jwy"
+    },
+    {
+      "hex": "0fdee1521529d4bf609c8c5a82b6b8fa4d1a9b6c9f8c735eaf92a9b145",
+      "text": "z2oeu-xqp33-qvefj-j2s7w-bheml-kblno-h2jun-jw3e7-rrzv5-l4svg-yuk"
+    }
+  ]
+}

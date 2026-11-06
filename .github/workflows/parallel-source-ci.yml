@@ -1,0 +1,56 @@
+name: Parallel source CI
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main, 'work/**', 'dev/**']
+permissions:
+  contents: read
+concurrency:
+  group: parallel-source-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  suites:
+    name: source-${{ matrix.suite }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        suite: [wallet, node, external, app, relay]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version-file: .node-version
+          package-manager-cache: false
+      - name: Run all tests in the selected fixed suite
+        run: node app/ci.mjs --suite '${{ matrix.suite }}' --jobs 1 --output ci-output
+      - name: Save source-bound receipts (not private wallet state)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: source-${{ matrix.suite }}-${{ github.run_attempt }}
+          path: |
+            ci-output/summary.json
+            ci-output/*.tap
+            ci-output/source-before.json
+            ci-output/source-after.json
+          if-no-files-found: error
+          retention-days: 14
+  source-ci-gate:
+    name: source-ci-gate
+    if: always()
+    needs: [suites]
+    runs-on: ubuntu-24.04
+    permissions: {}
+    steps:
+      - name: Fail closed on any failed, skipped or cancelled matrix job
+        env:
+          RESULT: ${{ needs.suites.result }}
+        run: test "$RESULT" = success
+# This fast gate is NOT the full build, a VM execution gate, or production approval.
+# No pull_request_target, write token, deployment, auto-merge or agent API key.

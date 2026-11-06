@@ -1,0 +1,195 @@
+{
+  "servedRelease": "base-sepolia-c052e1d9f8a4",
+  "scope": "built configured app on public Base Sepolia; connected screens measured at every required width, signing refused so nothing can be sent",
+  "cases": [
+    {
+      "width": 320,
+      "textScale": 1,
+      "dimensions": {
+        "viewport": 320,
+        "document": 320,
+        "body": 320
+      },
+      "measuredElements": 71,
+      "keyboardReachedExecute": true,
+      "feeDetailsOpened": 2,
+      "reviewFields": [
+        "支払",
+        "予想受取",
+        "最低受取",
+        "承認",
+        "交換手数料",
+        "承認先・交換先",
+        "受取先",
+        "期限"
+      ],
+      "clippedElements": [],
+      "truncatedElements": [],
+      "executeFocus": {
+        "text": "数量を承認して交換へ（ウォレットで2回確認）",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "insideViewport": true
+      },
+      "pageErrors": 0
+    },
+    {
+      "width": 375,
+      "textScale": 1,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "body": 375
+      },
+      "measuredElements": 71,
+      "keyboardReachedExecute": true,
+      "feeDetailsOpened": 2,
+      "reviewFields": [
+        "支払",
+        "予想受取",
+        "最低受取",
+        "承認",
+        "交換手数料",
+        "承認先・交換先",
+        "受取先",
+        "期限"
+      ],
+      "clippedElements": [],
+      "truncatedElements": [],
+      "executeFocus": {
+        "text": "数量を承認して交換へ（ウォレットで2回確認）",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "insideViewport": true
+      },
+      "pageErrors": 0
+    },
+    {
+      "width": 768,
+      "textScale": 1,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "body": 768
+      },
+      "measuredElements": 71,
+      "keyboardReachedExecute": true,
+      "feeDetailsOpened": 2,
+      "reviewFields": [
+        "支払",
+        "予想受取",
+        "最低受取",
+        "承認",
+        "交換手数料",
+        "承認先・交換先",
+        "受取先",
+        "期限"
+      ],
+      "clippedElements": [],
+      "truncatedElements": [],
+      "executeFocus": {
+        "text": "数量を承認して交換へ（ウォレットで2回確認）",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "insideViewport": true
+      },
+      "pageErrors": 0
+    },
+    {
+      "width": 1280,
+      "textScale": 1,
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "measuredElements": 71,
+      "keyboardReachedExecute": true,
+      "feeDetailsOpened": 2,
+      "reviewFields": [
+        "支払",
+        "予想受取",
+        "最低受取",
+        "承認",
+        "交換手数料",
+        "承認先・交換先",
+        "受取先",
+        "期限"
+      ],
+      "clippedElements": [],
+      "truncatedElements": [],
+      "executeFocus": {
+        "text": "数量を承認して交換へ（ウォレットで2回確認）",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "insideViewport": true
+      },
+      "pageErrors": 0
+    },
+    {
+      "width": 375,
+      "textScale": 2,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "body": 375
+      },
+      "measuredElements": 71,
+      "keyboardReachedExecute": true,
+      "feeDetailsOpened": 2,
+      "reviewFields": [
+        "支払",
+        "予想受取",
+        "最低受取",
+        "承認",
+        "交換手数料",
+        "承認先・交換先",
+        "受取先",
+        "期限"
+      ],
+      "clippedElements": [],
+      "truncatedElements": [],
+      "executeFocus": {
+        "text": "数量を承認して交換へ（ウォレットで2回確認）",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "insideViewport": true
+      },
+      "pageErrors": 0
+    },
+    {
+      "width": 1280,
+      "textScale": 2,
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "measuredElements": 71,
+      "keyboardReachedExecute": true,
+      "feeDetailsOpened": 2,
+      "reviewFields": [
+        "支払",
+        "予想受取",
+        "最低受取",
+        "承認",
+        "交換手数料",
+        "承認先・交換先",
+        "受取先",
+        "期限"
+      ],
+      "clippedElements": [],
+      "truncatedElements": [],
+      "executeFocus": {
+        "text": "数量を承認して交換へ（ウォレットで2回確認）",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "insideViewport": true
+      },
+      "pageErrors": 0
+    }
+  ],
+  "browser": "143.0.7499.4",
+  "refusedSigningAttempts": 0,
+  "ranAt": "2026-09-09T16:04:45.490Z"
+}

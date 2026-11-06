@@ -1,0 +1,24 @@
+{
+  "schema": "realdex.stellar-quickstart-pin.v1",
+  "quickstartImage": "stellar/quickstart:v666-b1412.1-latest",
+  "quickstartImageDigest": "sha256:057b31d5c23d90d58c4637c2888163f1c78afd6c08941339121f4feb9d78b087",
+  "coreVersion": "v28.0.1",
+  "coreBuild": "v28.0.1",
+  "protocolVersion": 28,
+  "baseXdrGitVersion": "9c9c1459",
+  "networkPassphrase": "Standalone Network ; February 2017",
+  "mode": "local",
+  "testOnly": true,
+  "publicNetworkAllowed": false,
+  "autoPullAllowed": false,
+  "source": {
+    "repository": "stellar/quickstart",
+    "stableTrackEvidence": "stellar/go-stellar-sdk#5967",
+    "verifiedTrack": "v666-b1412.1-latest",
+    "linuxAmd64Digest": "sha256:ddd160f3c934d4cd076afa77f96cada2dcdb94628c96df28389571093b416787",
+    "digestVerification": "Manifest fetched from registry-1.docker.io and sha256 recomputed over the returned bytes; it equals the Docker-Content-Digest header, so this digest is content-addressed rather than asserted by the server.",
+    "runtimeVerification": "Started locally with podman on 2026-09-09. Horizon reports supported_protocol_version 28 and actually ingests: history_latest_ledger tracked core_latest_ledger. Friendbot answered HTTP 200.",
+    "replacedPin": "v657-b1330.1-latest at sha256:6c8874f3576031979b0686c28b7abd2399942790ec5fa15a5d53348bc35eb2a9. Its Horizon supports protocol 27 at most, so under protocolVersion 28 it could never ingest and looped start to buildFromCheckpoint to error indefinitely. The gate could not have passed with that combination.",
+    "coreBuildNote": "coreBuild mirrors what stellar-core version prints. The previous value 28.0.0-3494.a9b861321.noble was a package build string no image exposes: absent from stellar-core version, from dpkg and from the image labels, so it could never be checked against a running container."
+  }
+}

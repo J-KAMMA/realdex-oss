@@ -1,0 +1,12 @@
+allowBuilds:
+  # Left undecided, a fresh install stops with ERR_PNPM_IGNORED_BUILDS, so a
+  # clean-room reproduction cannot even reach the build (L-3 in the v0.1 self
+  # audit). bufferutil / utf-8-validate are optional speedups ws falls back
+  # from. Declining them keeps the install deterministic and free of native
+  # compilation on a wallet-facing tree.
+  bufferutil: false
+  esbuild: true
+  keccak: true
+  utf-8-validate: false
+overrides:
+  "@scure/base": "2.2.0"

@@ -1,0 +1,14 @@
+{
+  "schema": "realdex.extended-probe-request.v1",
+  "networkId": "zcash:mainnet",
+  "endpoints": [
+    {
+      "url": "http://127.0.0.1:8232",
+      "authEnv": "REALDEX_ZCASH_AUTHORIZATION"
+    }
+  ],
+  "genesisPin": "REPLACE_WITH_INDEPENDENTLY_VERIFIED_64_HEX_GENESIS",
+  "access": {
+    "mode": "local-only"
+  }
+}

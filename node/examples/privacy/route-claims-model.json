@@ -1,0 +1,34 @@
+{
+  "schema": "realdex.route-claims.v1",
+  "request": {
+    "inputAssetKey": "model:one/a",
+    "outputAssetKey": "model:one/b",
+    "amountInAtomic": "1000"
+  },
+  "routes": [
+    {
+      "id": "privacy-model",
+      "amountInAtomic": "1000",
+      "minimumOutAtomic": "900",
+      "additionalCostOutAtomic": "1",
+      "expiresAt": 1893456000000,
+      "steps": [
+        {
+          "id": "model-swap",
+          "kind": "swap",
+          "from": {
+            "networkId": "model:one",
+            "assetKey": "model:one/a",
+            "visibility": "shielded"
+          },
+          "to": {
+            "networkId": "model:one",
+            "assetKey": "model:one/b",
+            "visibility": "shielded"
+          },
+          "disclosure": "none"
+        }
+      ]
+    }
+  ]
+}

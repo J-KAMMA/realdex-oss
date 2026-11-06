@@ -1,0 +1,9 @@
+{
+  "schema": "realdex.chain-probe-request.v1",
+  "chainId": "ton:mainnet",
+  "endpoints": [
+    "https://YOUR-FIRST-PROVIDER.invalid/api/v2",
+    "https://YOUR-SECOND-PROVIDER.invalid/api/v2"
+  ],
+  "genesisPin": "REPLACE_WITH_INDEPENDENTLY_REVIEWED_GENESIS_IDENTIFIER"
+}

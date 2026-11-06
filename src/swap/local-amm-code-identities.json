@@ -1,0 +1,8 @@
+{
+  "schema": "localswap.evm-code-identities.v1",
+  "solidity": "0.8.24",
+  "optimizerRuns": 500,
+  "factoryRuntimeCodeHash": "0xff03fb954cf0e48c7da39c529d7666baa4f25063918aaf8a9d6f0a318fa023f8",
+  "routerRuntimeCodeHash": "0xdd29fe39b4854cad176e70d89cb3c5aa5a02faca2325c940aefa16be6f5e03b7",
+  "mockErc20Decimals18RuntimeCodeHash": "0x2a56844165786cdd129904682e03426a2993721f957e2421ae7d712ce7f8c14f"
+}

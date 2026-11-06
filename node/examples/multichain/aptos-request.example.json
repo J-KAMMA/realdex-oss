@@ -1,0 +1,8 @@
+{
+  "schema": "realdex.chain-probe-request.v1",
+  "chainId": "aptos:1",
+  "endpoints": [
+    "https://YOUR-FIRST-PROVIDER.invalid/v1",
+    "https://YOUR-SECOND-PROVIDER.invalid/v1"
+  ]
+}

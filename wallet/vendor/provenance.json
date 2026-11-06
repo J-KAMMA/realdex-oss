@@ -1,0 +1,13 @@
+{
+  "package": "@noble/secp256k1",
+  "version": "2.2.3",
+  "repository": "https://github.com/paulmillr/noble-secp256k1",
+  "upstreamPath": "index.js",
+  "upstreamRef": "2.2.3",
+  "gitBlobSha1": "e1156d42830a9cf4fd54a8f8e3b26f7c984e1dae",
+  "sha256": "45f34003f752401c860347182c0bce4e7d0306cbf6aac70b17593ee70deaeaec",
+  "size": 27173,
+  "changes": "No content changes; .mjs extension only",
+  "license": "MIT",
+  "walletAudited": false
+}

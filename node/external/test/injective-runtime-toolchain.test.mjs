@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {spawnSync} from 'node:child_process';
+import {verifiedRuntime,decimalText} from '../../../integration/injective/fixture.mjs';
+import {decimal,shift} from '../math.mjs';
+function fixture(t){const p=fs.mkdtempSync(path.join(os.tmpdir(),'inj-pin-test-'));t.after(()=>fs.rmSync(p,{recursive:true,force:true}));return p;}
+test('No implicit global injectived binary is accepted',()=>assert.throws(()=>verifiedRuntime(undefined),/REQUIRED/));
+test('Changed binary content cannot become a verified runtime',t=>{const p=fixture(t);fs.writeFileSync(path.join(p,'injectived'),'fake');assert.throws(()=>verifiedRuntime(p),/HASH/);});
+test('Runtime directory symlinks are refused',t=>{const p=fixture(t);fs.mkdirSync(path.join(p,'real'));fs.symlinkSync('real',path.join(p,'alias'));assert.throws(()=>verifiedRuntime(path.join(p,'alias')),/PATH/);});
+test('Runtime CLI does not replace existing directories or execute corrupt input',t=>{const p=fixture(t),file=path.join(p,'bad.zip');fs.writeFileSync(file,'bad');const r=spawnSync('python3',['-I','integration/injective/provision.py','--archive',file,'--output',path.join(p,'out')],{cwd:path.resolve(import.meta.dirname,'../../..'),encoding:'utf8',timeout:10000});assert.equal(r.status,1);assert.equal(JSON.parse(r.stdout).verified,false);assert.equal(fs.existsSync(path.join(p,'out')),false);});
+test('Decimal conversion preserves small human ticks and large integer quantities',()=>{assert.equal(decimalText(shift(decimal('0.01'),-12)),'0.00000000000001');assert.equal(decimalText(shift(decimal('0.01'),18)),'10000000000000000');assert.equal(decimalText(decimal('0.125')),'0.125');});
+test('All archive and selected runtime hashes are explicitly pinned',()=>{const p=JSON.parse(fs.readFileSync(new URL('../../../integration/injective/pin.json',import.meta.url)));assert.match(p.archiveSha256,/^[a-f0-9]{64}$/);assert.equal(Object.keys(p.files).length,2);for(const v of Object.values(p.files)){assert.ok(v.bytes>0);assert.match(v.sha256,/^[a-f0-9]{64}$/);}});

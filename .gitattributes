@@ -1,0 +1,19 @@
+# The release identity hashes the bytes of the pinned sources on disk, on purpose,
+# so that a line-ending change shows up instead of hiding. That makes checkout
+# behaviour part of the reproduction: with core.autocrlf=true and no attributes,
+# git stores LF and hands out CRLF, so a fresh clone on Windows builds a different
+# release id than the one committed in the pinned profile — and the clean-room
+# reproduction never noticed, because it copied a working tree instead of cloning.
+#
+# Pinning eol=lf makes every checkout produce the same bytes on every platform.
+* text=auto eol=lf
+
+# Binaries must not be touched at all.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary

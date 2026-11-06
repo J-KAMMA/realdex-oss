@@ -1,0 +1,109 @@
+{
+  "schema": "realdex.multi-token-market-demonstration.v1",
+  "note": "Demonstration only. Not part of the v0.1 acceptance and not covered by any P0 row. No pinned v0.1 target changed.",
+  "chainId": "84532",
+  "network": "Base Sepolia (eip155:84532)",
+  "signer": "0x3EF758d338E783a69CD297f6907c1adf98970f2c",
+  "ranAt": "2026-09-03T13:17:51.971Z",
+  "unchangedV01Targets": {
+    "factory": "0xb6228A7454D8a3CDcAA5E13F65d5aCc27863903f",
+    "router": "0x2c350D695F3f6C8207f94f4957Be95B05765b3d6",
+    "pool": "0xb389b20384dc8071B542D946537D333684A47F4D",
+    "ambr": "0x3c4E0537Ac2B41A05e8ee21eA8948AC9b9CCfE62",
+    "jade": "0xb94222ECa3809DC5ecD01A2Fb035952C8EeeA9F8"
+  },
+  "added": {
+    "onyx": "0x9d1f1296537776144968ef851cAEe73B37fEaCEa",
+    "jadeOnyxPool": "0xEB8d082EB9E49D1FE94611f3f3e42E45d9F8f539",
+    "liquidity": {
+      "jade": "10000000000000000000000",
+      "onyx": "5000000000000000000000"
+    }
+  },
+  "route": {
+    "pools": [
+      "0xb389b20384dc8071B542D946537D333684A47F4D",
+      "0xEB8d082EB9E49D1FE94611f3f3e42E45d9F8f539"
+    ],
+    "hops": 2,
+    "tokenIn": "0x3c4E0537Ac2B41A05e8ee21eA8948AC9b9CCfE62",
+    "tokenOut": "0x9d1f1296537776144968ef851cAEe73B37fEaCEa"
+  },
+  "amountIn": "100000000000000000000",
+  "quotedOut": "95256638785686758838",
+  "minAmountOut": "94780355591758325044",
+  "measured": {
+    "spent": "100000000000000000000",
+    "received": "95256638785686758838",
+    "routerAllowanceAfter": "0"
+  },
+  "steps": [
+    {
+      "label": "token:ONYX",
+      "transactionHash": "0xf035547940337c8fa959b12a35f156e87b56f0ba57a3048310e960cea91a93fc",
+      "blockNumber": 46336580,
+      "contractAddress": "0x9d1f1296537776144968ef851cAEe73B37fEaCEa",
+      "gasUsed": "485912",
+      "totalFeeWei": "2921554660631"
+    },
+    {
+      "label": "createPool:JADE/ONYX",
+      "transactionHash": "0x03e121c4b5835b3c5c5b13ebfe563e22739684fbf91486709a57dd60b044bf58",
+      "blockNumber": 46336581,
+      "contractAddress": null,
+      "gasUsed": "1440542",
+      "totalFeeWei": "8649334487128"
+    },
+    {
+      "label": "mint:ONYX",
+      "transactionHash": "0x5456383ba8fa9f539346bd8da27b2af26d0b4f13460e56fb6f6e648705e9eb2f",
+      "blockNumber": 46336583,
+      "contractAddress": null,
+      "gasUsed": "68310",
+      "totalFeeWei": "453468780743"
+    },
+    {
+      "label": "approve:JADE->pool2",
+      "transactionHash": "0x534f303f36d84b148cdae37e00914590e233d3d919b8071bb4308f073b2f064a",
+      "blockNumber": 46336584,
+      "contractAddress": null,
+      "gasUsed": "46179",
+      "totalFeeWei": "304146779175"
+    },
+    {
+      "label": "approve:ONYX->pool2",
+      "transactionHash": "0xc5e0feab817c238630959198d0d6f5eb8112910a463181900e9151ed2cce29c8",
+      "blockNumber": 46336585,
+      "contractAddress": null,
+      "gasUsed": "46179",
+      "totalFeeWei": "283156487128"
+    },
+    {
+      "label": "addLiquidity:JADE/ONYX",
+      "transactionHash": "0xa7af00bdb13e3b0e1cd52423b00f423e743a7faf8affdbb01a1026c1863e0653",
+      "blockNumber": 46336587,
+      "contractAddress": null,
+      "gasUsed": "216254",
+      "totalFeeWei": "1304199827779"
+    },
+    {
+      "label": "approve:AMBR->router",
+      "transactionHash": "0xba47e2b7e954cfe502b4f28de2c35ca93c39a6aa2c15b34d95447a65b47433d8",
+      "blockNumber": 46336589,
+      "contractAddress": null,
+      "gasUsed": "46167",
+      "totalFeeWei": "283089895371"
+    },
+    {
+      "label": "routedTrade:AMBR->JADE->ONYX",
+      "transactionHash": "0x528d4078690f329b276804211027747b6ec4620bc94520ead84b2b724bcefda4",
+      "blockNumber": 46336591,
+      "contractAddress": null,
+      "gasUsed": "206318",
+      "totalFeeWei": "1249218025055"
+    }
+  ],
+  "totalFeeWei": "15448168943010",
+  "remainingBalanceWei": "847607283851770",
+  "passed": true
+}

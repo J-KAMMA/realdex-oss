@@ -1,0 +1,14 @@
+{
+  "schema": "realdex.icrc-request.v1",
+  "network": "icp:mainnet",
+  "ledger": "ryjl3-tyaaa-aaaaa-aaaba-cai",
+  "endpoints": [
+    "https://icp-api.io"
+  ],
+  "access": {
+    "mode": "explicit-remote",
+    "allowedOrigins": [
+      "https://icp-api.io"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "realdex.icrc-request.v1",
+  "network": "icp:local-development",
+  "ledger": "ryjl3-tyaaa-aaaaa-aaaba-cai",
+  "endpoints": [
+    "http://127.0.0.1:4943"
+  ],
+  "access": {
+    "mode": "local-only"
+  }
+}

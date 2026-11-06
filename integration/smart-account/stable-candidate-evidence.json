@@ -1,0 +1,14 @@
+{
+  "schema": "realdex.smart-account-stable-candidate-evidence.v1",
+  "sourceCommit": "f56c12d0592c813d16c2a433ef51b098109e1c60",
+  "buildInfoSha256": "d2842667a68ac76f291340d164e0f3958195af51e02fcf74984cd934298b3e8e",
+  "inputSha256": "078f5f4c110b8b9d6f91b8f8e615691d3fda0fb59464df0a05437189b7213787",
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "compilerSha256": "fb03a29a517452b9f12bcf459ef37d0a543765bb3bbc911e70a87d6a37c30d5f",
+  "compilerExecutedInImportedEvidence": true,
+  "compilerExecutionReplayedInThisCandidate": false,
+  "independentReviewComplete": false,
+  "productionApproved": false,
+  "standardInputFileSha256": "f79c4d0b60e8a34304d5445f9e089a93e494e4d40edd95f8b9ad7b210d91a97a",
+  "candidateSha256": "0d69764adb7984d2d1dc9138ff79dcbd3d1a70e78075a7fc23d377bdecc54c96"
+}
